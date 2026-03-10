@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-gray-800 bg-white leading-relaxed;
+  }
+}
+
+@layer components {
+  .prose h2 {
+    @apply text-2xl font-bold mt-10 mb-4 pb-2 border-b border-gray-200;
+  }
+  .prose h3 {
+    @apply text-xl font-semibold mt-8 mb-3;
+  }
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+  .prose ul, .prose ol {
+    @apply mb-4 pl-6;
+  }
+  .prose li {
+    @apply mb-2;
+  }
+  .prose ul li {
+    @apply list-disc;
+  }
+  .prose ol li {
+    @apply list-decimal;
+  }
+  .prose a {
+    @apply text-primary-600 underline hover:text-primary-800 transition-colors;
+  }
+  .prose blockquote {
+    @apply border-l-4 border-primary-300 bg-primary-50 pl-4 py-2 my-4 italic;
+  }
+  .prose img {
+    @apply rounded-lg shadow-md my-6;
+  }
+  .prose table {
+    @apply w-full border-collapse my-6;
+  }
+  .prose th {
+    @apply bg-gray-100 border border-gray-300 px-4 py-2 text-left font-semibold;
+  }
+  .prose td {
+    @apply border border-gray-300 px-4 py-2;
+  }
+  .prose pre {
+    @apply rounded-lg my-4 overflow-x-auto;
+  }
+  .prose code:not(pre code) {
+    @apply bg-gray-100 text-red-600 px-1.5 py-0.5 rounded text-sm;
+  }
+}

@@ -1,0 +1,66 @@
+---
+const navItems = [
+  { label: 'ホーム', href: '/' },
+  { label: 'AIツール', href: '/#ai-tools' },
+  { label: 'SaaS', href: '/#saas' },
+  { label: 'ガジェット', href: '/#gadgets' },
+  { label: '運営者情報', href: '/about' },
+];
+---
+
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+    <a href="/" class="text-xl font-bold text-primary-700 hover:text-primary-800 transition-colors">
+      AI Tech Review
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="hidden md:flex items-center gap-6">
+      {navItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="text-gray-600 hover:text-primary-600 font-medium transition-colors text-sm"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden p-2 text-gray-600 hover:text-primary-600"
+      aria-label="メニューを開く"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white">
+    <ul class="px-4 py-2">
+      {navItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="block py-2 text-gray-600 hover:text-primary-600 font-medium text-sm"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

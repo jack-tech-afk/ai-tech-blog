@@ -1,0 +1,47 @@
+---
+interface Props {
+  name: string;
+  url: string;
+  price?: string;
+  rating?: number;
+  description?: string;
+  buttonText?: string;
+}
+
+const {
+  name,
+  url,
+  price,
+  rating,
+  description,
+  buttonText = '公式サイトを見る',
+} = Astro.props;
+
+const stars = rating ? Math.round(rating * 2) / 2 : null;
+---
+
+<div class="my-6 p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl">
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+    <div class="flex-1">
+      <h4 class="font-bold text-gray-800 text-lg">{name}</h4>
+      {description && <p class="text-sm text-gray-600 mt-1">{description}</p>}
+      <div class="flex items-center gap-3 mt-2">
+        {price && <span class="text-sm font-semibold text-primary-700">{price}</span>}
+        {stars && (
+          <span class="text-sm text-yellow-500">
+            {'★'.repeat(Math.floor(stars))}{'☆'.repeat(5 - Math.floor(stars))}
+            <span class="text-gray-500 ml-1">({rating})</span>
+          </span>
+        )}
+      </div>
+    </div>
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer sponsored"
+      class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-3 rounded-lg text-center transition-colors text-sm whitespace-nowrap"
+    >
+      {buttonText} →
+    </a>
+  </div>
+</div>
