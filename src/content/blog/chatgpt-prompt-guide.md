@@ -6,7 +6,7 @@ category: "guides"
 tags: ["ChatGPT", "プロンプト", "活用術", "仕事効率化"]
 affiliate:
   - name: "ChatGPT Plus"
-    url: "#chatgpt-affiliate"
+    url: "https://chatgpt.com/#pricing"
     price: "月額20ドル（約3,000円）"
     rating: 4.5
 ---
@@ -608,7 +608,7 @@ ChatGPTに**良いプロンプトを考えさせる**という高度なテクニ
 
 **月額3,000円で業務効率が大幅に向上する**ことを考えれば、ビジネスパーソンにとってはコスパの良い投資と言えるでしょう。
 
-[ChatGPT Plusに登録する](#chatgpt-affiliate)
+[ChatGPT Plusに登録する](https://chatgpt.com/#pricing)
 
 ## まとめ
 
