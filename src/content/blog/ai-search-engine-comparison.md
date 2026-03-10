@@ -2,7 +2,8 @@
 title: "【2026年最新】AI検索エンジン比較5選｜Perplexity・ChatGPT Search・Geminiを徹底比較"
 description: "Perplexity AI、ChatGPT Search、Gemini、Copilot、Genspark等の主要AI検索エンジンを徹底比較。精度・速度・料金・使い勝手を実際に使って検証しました。"
 pubDate: "2026-03-10"
-category: "AIツール"
+category: "ai-tools"
+heroImage: "/images/heroes/ai-search-engine-comparison.png"
 tags: ["AI検索", "Perplexity", "ChatGPT", "Gemini", "比較"]
 affiliate:
   - name: "Perplexity Pro"

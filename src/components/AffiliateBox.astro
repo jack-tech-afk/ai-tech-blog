@@ -18,30 +18,81 @@ const {
 } = Astro.props;
 
 const stars = rating ? Math.round(rating * 2) / 2 : null;
+const fullStars = stars ? Math.floor(stars) : 0;
+const hasHalf = stars ? stars % 1 !== 0 : false;
+const emptyStars = stars ? 5 - Math.ceil(stars) : 0;
 ---
 
-<div class="my-6 p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl">
-  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-    <div class="flex-1">
-      <h4 class="font-bold text-gray-800 text-lg">{name}</h4>
-      {description && <p class="text-sm text-gray-600 mt-1">{description}</p>}
-      <div class="flex items-center gap-3 mt-2">
-        {price && <span class="text-sm font-semibold text-primary-700">{price}</span>}
-        {stars && (
-          <span class="text-sm text-yellow-500">
-            {'★'.repeat(Math.floor(stars))}{'☆'.repeat(5 - Math.floor(stars))}
-            <span class="text-gray-500 ml-1">({rating})</span>
-          </span>
+<div class="affiliate-card">
+  {price && <div class="ribbon">おすすめ</div>}
+  <div class="p-6">
+    <div class="flex flex-col sm:flex-row sm:items-start gap-5">
+      <!-- Product Info -->
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center gap-2 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+          <h4 class="font-bold text-gray-900 text-lg">{name}</h4>
+        </div>
+        {description && (
+          <p class="text-sm text-gray-600 mb-3 leading-relaxed">{description}</p>
         )}
+        <div class="flex flex-wrap items-center gap-4">
+          {price && (
+            <div class="flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              <span class="text-sm font-bold text-green-700 bg-green-50 px-2.5 py-0.5 rounded-full">{price}</span>
+            </div>
+          )}
+          {stars && (
+            <div class="rating-stars">
+              {Array.from({length: fullStars}).map(() => (
+                <svg class="w-4 h-4 star-filled" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+              {hasHalf && (
+                <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20">
+                  <defs>
+                    <linearGradient id="half-star">
+                      <stop offset="50%" stop-color="currentColor" />
+                      <stop offset="50%" stop-color="#d1d5db" />
+                    </linearGradient>
+                  </defs>
+                  <path fill="url(#half-star)" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              )}
+              {Array.from({length: emptyStars}).map(() => (
+                <svg class="w-4 h-4 star-empty" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+              <span class="text-xs text-gray-500 ml-1 font-medium">({rating})</span>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="flex-shrink-0">
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+          class="affiliate-cta animate-pulse-glow"
+        >
+          {buttonText}
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
       </div>
     </div>
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer sponsored"
-      class="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-3 rounded-lg text-center transition-colors text-sm whitespace-nowrap"
-    >
-      {buttonText} →
-    </a>
   </div>
 </div>

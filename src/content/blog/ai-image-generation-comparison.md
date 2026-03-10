@@ -3,6 +3,7 @@ title: "【画像生成AI比較】Midjourney vs DALL-E 3 vs Stable Diffusion ど
 description: "人気の画像生成AI3つを徹底比較。画質・使いやすさ・料金・商用利用の観点から、あなたに最適なツールを見つけます。"
 pubDate: "2026-03-07"
 category: "ai-tools"
+heroImage: "/images/heroes/ai-image-generation.png"
 tags: ["画像生成AI", "Midjourney", "DALL-E", "Stable Diffusion"]
 affiliate:
   - name: "Midjourney"

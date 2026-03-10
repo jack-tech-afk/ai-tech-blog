@@ -3,6 +3,7 @@ title: "【2026年版】おすすめAIツール15選！仕事効率が3倍にな
 description: "2026年に使うべきおすすめAIツール15選を厳選紹介。文章作成、画像生成、動画編集、プログラミングなど目的別に最強ツールを解説。"
 pubDate: "2026-03-09"
 category: "ranking"
+heroImage: "/images/heroes/best-ai-tools-2026.png"
 tags: ["AIツール", "おすすめ", "2026年", "仕事効率化"]
 affiliate:
   - name: "ChatGPT Plus"

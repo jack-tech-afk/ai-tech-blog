@@ -3,6 +3,7 @@ title: "【2026年】ワイヤレスイヤホンおすすめ10選！用途別に
 description: "2026年最新のワイヤレスイヤホンおすすめ10選。ノイキャン・音質・コスパで徹底比較し、通勤・運動・仕事用途別にベストな1台を紹介。"
 pubDate: "2026-03-05"
 category: "gadgets"
+heroImage: "/images/heroes/wireless-earbuds.png"
 tags: ["ワイヤレスイヤホン", "ガジェット", "おすすめ", "2026年"]
 affiliate:
   - name: "AirPods Pro 3"

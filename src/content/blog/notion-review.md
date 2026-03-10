@@ -3,6 +3,7 @@ title: "【Notion完全レビュー】無料プランでどこまで使える？
 description: "Notionを実際に使ったレビュー。無料プランと有料プランの違い、メリット・デメリット、おすすめの活用法を詳しく解説します。"
 pubDate: "2026-03-08"
 category: "saas"
+heroImage: "/images/heroes/notion-review.png"
 tags: ["Notion", "SaaS", "タスク管理", "ノートアプリ"]
 affiliate:
   - name: "Notion Plus"
