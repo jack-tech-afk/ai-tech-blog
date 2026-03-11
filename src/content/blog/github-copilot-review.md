@@ -1,5 +1,5 @@
 ---
-title: "【GitHub Copilot徹底レビュー】料金・使い方・効果を現役エンジニアが解説"
+title: "【GitHub Copilot】料金・使い方・効果を徹底レビュー"
 description: "GitHub Copilotを半年使った本音レビュー。料金プラン、実際のコード補完精度、生産性の変化、メリット・デメリットを詳しく解説。"
 pubDate: "2026-03-03"
 category: "saas"
