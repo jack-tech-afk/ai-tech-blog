@@ -3,6 +3,7 @@ title: "【2026年】メカニカルキーボードおすすめ12選！在宅ワ
 description: "メカニカルキーボードのおすすめを在宅ワーク・プログラミング・ゲーミング用途別に紹介。軸の選び方から予算別のベストモデルまで徹底解説。"
 pubDate: "2026-03-01"
 category: "gadgets"
+heroImage: "/images/heroes/keyboard-recommendation.png"
 tags: ["キーボード", "メカニカル", "在宅ワーク", "ガジェット"]
 affiliate:
   - name: "HHKB Professional HYBRID Type-S"

@@ -3,6 +3,7 @@ title: "【クラウドストレージ比較】Google Drive vs Dropbox vs OneDri
 description: "主要クラウドストレージ3社を無料容量・有料プラン・機能・セキュリティで徹底比較。個人・ビジネスそれぞれのおすすめを解説。"
 pubDate: "2026-03-02"
 category: "saas"
+heroImage: "/images/heroes/cloud-storage-comparison.png"
 tags: ["クラウドストレージ", "Google Drive", "Dropbox", "OneDrive"]
 affiliate:
   - name: "Dropbox Plus"

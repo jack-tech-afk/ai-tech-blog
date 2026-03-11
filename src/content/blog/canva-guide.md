@@ -3,6 +3,7 @@ title: "【Canva使い方ガイド】初心者でも5分でプロ並みデザイ
 description: "Canvaの使い方を初心者向けに徹底解説。無料プランでできること、Pro版との違い、おすすめテンプレートの活用法を紹介します。"
 pubDate: "2026-03-06"
 category: "guides"
+heroImage: "/images/heroes/canva-guide.png"
 tags: ["Canva", "デザインツール", "使い方", "初心者"]
 affiliate:
   - name: "Canva Pro"
