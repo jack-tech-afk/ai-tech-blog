@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  category: string;
+  currentSlug: string;
+}
+
+const { category, currentSlug } = Astro.props;
+
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+  .filter((post) => post.data.category === category && post.id !== currentSlug)
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+  .slice(0, 3);
+
+const categoryLabels: Record<string, string> = {
+  'ai-tools': 'AIツール',
+  'saas': 'SaaS',
+  'gadgets': 'ガジェット',
+  'guides': '使い方ガイド',
+  'ranking': 'ランキング',
+};
+---
+
+{relatedPosts.length > 0 && (
+  <div class="mt-12 pt-8 border-t border-gray-200">
+    <div class="flex items-center gap-2 mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+      </svg>
+      <h2 class="text-xl font-bold text-gray-800">関連記事</h2>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-3">
+      {relatedPosts.map((post) => {
+        const formattedDate = new Date(post.data.pubDate).toLocaleDateString('ja-JP', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        });
+        return (
+          <a href={`/${post.id}`} class="group block bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+            <div class="p-4">
+              <span class="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
+                {categoryLabels[post.data.category] || post.data.category}
+              </span>
+              <h3 class="mt-2 text-sm font-bold text-gray-800 line-clamp-2 group-hover:text-primary-600 transition-colors leading-snug">
+                {post.data.title}
+              </h3>
+              <p class="mt-1.5 text-xs text-gray-500 line-clamp-2 leading-relaxed">
+                {post.data.description}
+              </p>
+              <time class="block mt-2 text-xs text-gray-400" datetime={post.data.pubDate}>
+                {formattedDate}
+              </time>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+)}

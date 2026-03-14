@@ -1,26 +1,38 @@
 ---
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
 interface Props {
   title: string;
   description: string;
   image?: string;
+  heroImage?: string;
   article?: boolean;
   pubDate?: string;
   updatedDate?: string;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
 const {
   title,
   description,
-  image = '/images/og-default.webp',
+  image,
+  heroImage,
   article = false,
   pubDate,
   updatedDate,
+  breadcrumbs,
 } = Astro.props;
 
 const siteTitle = 'AI Tech Review - AIツール・ガジェット徹底比較';
 const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL(image, Astro.site);
+
+// OG image priority: heroImage > image prop > default
+const ogImagePath = heroImage || image || '/images/og-default.webp';
+const ogImage = new URL(ogImagePath, Astro.site);
 ---
 
 <meta charset="UTF-8" />
@@ -80,5 +92,19 @@ const ogImage = new URL(image, Astro.site);
     '@type': 'WebSite',
     name: siteTitle,
     url: Astro.site?.toString(),
+  })} />
+)}
+
+<!-- BreadcrumbList JSON-LD -->
+{breadcrumbs && breadcrumbs.length > 0 && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
   })} />
 )}

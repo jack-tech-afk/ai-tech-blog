@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import AffiliateBox from '../components/AffiliateBox.astro';
+import RelatedArticles from '../components/RelatedArticles.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -66,14 +67,25 @@ const icon = categoryIcons[post.data.category] || '📝';
 // Estimate reading time (Japanese: ~500 chars/min)
 const charCount = post.body?.length || 0;
 const readingTime = Math.max(1, Math.ceil(charCount / 500));
+
+// Breadcrumb data: ホーム → カテゴリ名 → 記事タイトル
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://ai-tech-review.company';
+const categoryLabel = categoryLabels[post.data.category] || post.data.category;
+const breadcrumbs = [
+  { name: 'ホーム', url: siteUrl },
+  { name: categoryLabel, url: `${siteUrl}/#${post.data.category}` },
+  { name: post.data.title, url: `${siteUrl}/${post.id}` },
+];
 ---
 
 <BaseLayout
   title={post.data.title}
   description={post.data.description}
+  heroImage={post.data.heroImage}
   article={true}
   pubDate={post.data.pubDate}
   updatedDate={post.data.updatedDate}
+  breadcrumbs={breadcrumbs}
 >
   <!-- Reading Progress Bar -->
   <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
@@ -165,6 +177,9 @@ const readingTime = Math.max(1, Math.ceil(charCount / 500));
         ))}
       </div>
     )}
+
+    <!-- Related Articles -->
+    <RelatedArticles category={post.data.category} currentSlug={post.id} />
 
     <!-- Share & Navigation -->
     <div class="mt-10 pt-6 border-t border-gray-200">

@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="ページが見つかりません"
+  description="お探しのページは見つかりませんでした。URLが正しいかご確認ください。"
+>
+  <div class="max-w-2xl mx-auto px-4 py-20 text-center">
+    <!-- 404 Icon -->
+    <div class="text-8xl mb-6 opacity-80">
+      🔍
+    </div>
+
+    <!-- Error Code -->
+    <h1 class="text-6xl font-bold text-gray-200 mb-4">404</h1>
+
+    <!-- Message -->
+    <h2 class="text-2xl font-bold text-gray-800 mb-3">ページが見つかりません</h2>
+    <p class="text-gray-500 mb-8 leading-relaxed">
+      お探しのページは移動または削除された可能性があります。<br />
+      URLが正しいかご確認ください。
+    </p>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors shadow-sm"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        トップページへ
+      </a>
+    </div>
+
+    <!-- Popular Categories -->
+    <div class="border-t border-gray-200 pt-8">
+      <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">人気カテゴリから探す</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/#ai-tools" class="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-primary-50 hover:text-primary-600 px-4 py-2 rounded-full transition-colors">
+          🤖 AIツール
+        </a>
+        <a href="/#saas" class="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-primary-50 hover:text-primary-600 px-4 py-2 rounded-full transition-colors">
+          ☁️ SaaS
+        </a>
+        <a href="/#gadgets" class="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-primary-50 hover:text-primary-600 px-4 py-2 rounded-full transition-colors">
+          📱 ガジェット
+        </a>
+        <a href="/#guides" class="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-primary-50 hover:text-primary-600 px-4 py-2 rounded-full transition-colors">
+          📖 使い方ガイド
+        </a>
+        <a href="/#ranking" class="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-gray-100 hover:bg-primary-50 hover:text-primary-600 px-4 py-2 rounded-full transition-colors">
+          🏆 ランキング
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
