@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tech Review 改善モックアップ</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, 'Hiragino Sans', sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.8; }
+.container { max-width: 780px; margin: 0 auto; padding: 20px; }
+.section-label { background: #6366f1; color: white; padding: 8px 16px; border-radius: 20px; display: inline-block; font-size: 13px; font-weight: bold; margin-bottom: 16px; letter-spacing: 1px; }
+.mock-title { font-size: 24px; font-weight: bold; color: #818cf8; margin-bottom: 30px; text-align: center; border-bottom: 3px solid #6366f1; padding-bottom: 10px; }
+
+/* ===== 1. タイトル改善 ===== */
+.title-comparison { background: #1e293b; border-radius: 12px; padding: 24px; margin-bottom: 30px; border: 1px solid #334155; }
+.title-before, .title-after { padding: 12px 16px; border-radius: 8px; margin: 8px 0; font-size: 16px; font-weight: bold; }
+.title-before { background: #3b1c1c; border-left: 4px solid #ef4444; color: #fca5a5; }
+.title-after { background: #1c3b2a; border-left: 4px solid #22c55e; color: #86efac; }
+.label-tag { font-size: 11px; font-weight: bold; padding: 2px 8px; border-radius: 4px; margin-right: 6px; }
+.tag-before { background: #7f1d1d; color: #fca5a5; }
+.tag-after { background: #14532d; color: #86efac; }
+
+/* ===== 2. 比較表 ===== */
+.comparison-table { width: 100%; border-collapse: collapse; margin: 16px 0; background: #1e293b; border-radius: 12px; overflow: hidden; border: 1px solid #334155; }
+.comparison-table th { background: #4f46e5; color: white; padding: 12px 8px; font-size: 13px; }
+.comparison-table td { padding: 10px 8px; text-align: center; font-size: 13px; border-bottom: 1px solid #334155; }
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table td:first-child { text-align: left; font-weight: bold; padding-left: 16px; }
+.rank-badge { display: inline-block; width: 24px; height: 24px; border-radius: 50%; color: white; font-size: 12px; font-weight: bold; line-height: 24px; text-align: center; margin-right: 4px; }
+.rank-1 { background: #FFD700; color: #333; }
+.rank-2 { background: #C0C0C0; color: #333; }
+.rank-3 { background: #CD7F32; }
+.stars { color: #FFB800; letter-spacing: 1px; }
+.price-tag { color: #818cf8; font-weight: bold; }
+.badge-free { background: #22c55e; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+.badge-paid { background: #f59e0b; color: #333; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+
+/* ===== 3. CTAボックス ===== */
+.cta-box { background: linear-gradient(135deg, #1e1b4b, #312e81); border: 2px solid #6366f1; border-radius: 16px; padding: 24px; margin: 20px 0; position: relative; overflow: hidden; }
+.cta-box::after { content: ""; position: absolute; top: -50%; right: -50%; width: 100%; height: 100%; background: radial-gradient(circle, rgba(99,102,241,0.1), transparent); }
+.cta-box-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.cta-box h3 { font-size: 20px; color: white; }
+.cta-box .price { font-size: 28px; color: #a5b4fc; font-weight: bold; }
+.cta-box .price-note { font-size: 12px; color: #94a3b8; }
+.cta-benefit { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+.benefit-item { background: rgba(99,102,241,0.2); border: 1px solid #6366f1; color: #c7d2fe; padding: 6px 14px; border-radius: 8px; font-size: 12px; }
+.cta-button { display: block; width: 100%; padding: 16px; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; border: none; border-radius: 12px; font-size: 17px; font-weight: bold; cursor: pointer; text-align: center; margin-top: 16px; position: relative; z-index: 1; }
+.cta-sub { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 8px; }
+.top-pick { position: absolute; top: 0; right: 0; background: #f59e0b; color: #333; padding: 4px 16px; border-radius: 0 14px 0 12px; font-size: 12px; font-weight: bold; }
+
+/* ===== 4. 更新日表示 ===== */
+.update-badge { display: flex; align-items: center; gap: 8px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 10px 16px; margin: 16px 0; font-size: 13px; }
+.update-badge .date { color: #22c55e; font-weight: bold; }
+.update-badge .label { color: #94a3b8; }
+
+/* ===== 5. FAQ ===== */
+.faq-section { background: #1e293b; border-radius: 12px; padding: 24px; margin: 20px 0; border: 1px solid #334155; }
+.faq-item { border-bottom: 1px solid #334155; padding: 14px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-weight: bold; color: #a5b4fc; font-size: 15px; display: flex; align-items: flex-start; gap: 8px; }
+.faq-q::before { content: "Q"; background: #6366f1; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
+.faq-a { margin-top: 8px; padding-left: 32px; font-size: 14px; color: #94a3b8; }
+.faq-a::before { content: "A"; background: #22c55e; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; margin-right: 8px; }
+
+/* ===== 6. トピッククラスター ===== */
+.cluster-section { background: #1e293b; border-radius: 12px; padding: 24px; margin: 20px 0; border: 1px solid #334155; }
+.cluster-pillar { background: #312e81; border: 2px solid #6366f1; border-radius: 12px; padding: 16px; text-align: center; margin-bottom: 16px; }
+.cluster-pillar h4 { color: #a5b4fc; font-size: 16px; }
+.cluster-pillar p { font-size: 12px; color: #94a3b8; }
+.cluster-children { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.cluster-child { background: #0f172a; border: 1px solid #334155; border-radius: 10px; padding: 12px; }
+.cluster-child .child-title { font-size: 13px; color: #e2e8f0; font-weight: bold; }
+.cluster-child .child-link { font-size: 11px; color: #6366f1; }
+.cluster-arrow { text-align: center; color: #6366f1; font-size: 20px; margin: -4px 0; }
+
+/* ===== 7. Product/Review Schema表示 ===== */
+.review-schema { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; margin: 20px 0; }
+.schema-header { display: flex; align-items: center; justify-content: space-between; }
+.schema-product { font-size: 18px; font-weight: bold; color: white; }
+.schema-rating { display: flex; align-items: center; gap: 6px; }
+.schema-score { font-size: 22px; color: #FFB800; font-weight: bold; }
+.schema-stars { color: #FFB800; font-size: 16px; }
+.schema-reviews { font-size: 12px; color: #94a3b8; }
+.schema-details { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
+.schema-detail { text-align: center; background: #0f172a; border-radius: 8px; padding: 10px; }
+.schema-detail .detail-label { font-size: 11px; color: #94a3b8; }
+.schema-detail .detail-value { font-size: 16px; font-weight: bold; color: #a5b4fc; margin-top: 2px; }
+
+/* ===== 8. 関連記事カード改善 ===== */
+.related-section { background: #1e293b; border-radius: 12px; padding: 24px; margin: 20px 0; border: 1px solid #334155; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+.related-card { background: #0f172a; border: 1px solid #334155; border-radius: 10px; overflow: hidden; }
+.related-card-img { height: 80px; background: linear-gradient(135deg, #312e81, #4f46e5); display: flex; align-items: center; justify-content: center; font-size: 28px; }
+.related-card-body { padding: 10px; }
+.related-card-title { font-size: 12px; font-weight: bold; color: #e2e8f0; line-height: 1.4; }
+.related-card-category { font-size: 10px; color: #6366f1; margin-top: 4px; }
+
+.divider { height: 2px; background: linear-gradient(to right, transparent, #6366f1, transparent); margin: 40px 0; }
+h2 { font-size: 20px; color: #e2e8f0; margin: 20px 0 12px; }
+.note { background: #1e293b; border: 1px solid #f59e0b; padding: 12px 16px; border-radius: 8px; font-size: 12px; color: #fbbf24; margin: 10px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1 class="mock-title">⚡ AI Tech Review 改善案モックアップ</h1>
+
+<!-- 1. タイトル改善 -->
+<span class="section-label">改善① タイトルフォーマット</span>
+<div class="title-comparison">
+<div class="title-before"><span class="label-tag tag-before">現在</span>AI文章作成ツール比較</div>
+<div class="title-after"><span class="label-tag tag-after">改善後</span>【2026年最新】AI文章作成ツールおすすめ8選｜無料・有料を徹底比較</div>
+<div class="title-before"><span class="label-tag tag-before">現在</span>Claude vs ChatGPT 比較レビュー</div>
+<div class="title-after"><span class="label-tag tag-after">改善後</span>【徹底比較】Claude 4 vs ChatGPT-5｜料金・性能・用途別おすすめ</div>
+</div>
+
+<!-- 2. 比較表 -->
+<span class="section-label">改善② 記事冒頭の比較表（500文字以内）</span>
+<table class="comparison-table">
+<tr>
+<th>ツール名</th>
+<th>月額料金</th>
+<th>特徴</th>
+<th>日本語</th>
+<th>プラン</th>
+<th>評価</th>
+</tr>
+<tr>
+<td><span class="rank-badge rank-1">1</span>Claude Pro</td>
+<td class="price-tag">$20/月</td>
+<td>長文・分析に最強</td>
+<td>◎</td>
+<td><span class="badge-paid">有料</span></td>
+<td class="stars">★★★★★</td>
+</tr>
+<tr>
+<td><span class="rank-badge rank-2">2</span>ChatGPT Plus</td>
+<td class="price-tag">$20/月</td>
+<td>汎用性No.1</td>
+<td>◎</td>
+<td><span class="badge-free">無料有</span></td>
+<td class="stars">★★★★★</td>
+</tr>
+<tr>
+<td><span class="rank-badge rank-3">3</span>Gemini Advanced</td>
+<td class="price-tag">$19.99/月</td>
+<td>Google連携</td>
+<td>○</td>
+<td><span class="badge-free">無料有</span></td>
+<td class="stars">★★★★☆</td>
+</tr>
+</table>
+
+<!-- 3. CTAボックス -->
+<div class="divider"></div>
+<span class="section-label">改善③ カラフルCTAボックス</span>
+<div class="cta-box">
+<div class="top-pick">🏆 編集部イチオシ</div>
+<div class="cta-box-header">
+<div>
+<h3>Claude Pro</h3>
+<div class="price">$20<span style="font-size:14px;color:#94a3b8">/月</span></div>
+<div class="price-note">年払いで20%OFF</div>
+</div>
+</div>
+<div class="cta-benefit">
+<div class="benefit-item">✅ 長文200Kトークン対応</div>
+<div class="benefit-item">✅ コード生成が高品質</div>
+<div class="benefit-item">✅ 日本語が自然</div>
+<div class="benefit-item">✅ Artifacts機能</div>
+</div>
+<div class="cta-button">🚀 Claude Proを無料で試してみる</div>
+<div class="cta-sub">※ 無料プランから始められます。クレジットカード不要</div>
+</div>
+
+<!-- 4. 更新日表示 -->
+<div class="divider"></div>
+<span class="section-label">改善④ 更新日の目立つ表示</span>
+<div class="update-badge">
+<span class="label">📅 公開: 2025-12-15</span>
+<span style="color:#334155">|</span>
+<span class="date">🔄 最終更新: 2026-03-14</span>
+<span style="color:#334155">|</span>
+<span class="label">👤 レビュアー: AI Tech Review編集部</span>
+</div>
+
+<!-- 5. FAQ -->
+<div class="divider"></div>
+<span class="section-label">改善⑤ FAQ セクション（FAQ Schema対応）</span>
+<div class="faq-section">
+<h2>❓ よくある質問</h2>
+<div class="faq-item">
+<div class="faq-q">AIライティングツールは無料で使えますか？</div>
+<div class="faq-a">Claude、ChatGPT、Geminiはいずれも無料プランがあります。ただし文字数制限やモデル制限があるため、本格利用には有料プランがおすすめです。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">日本語の文章生成で最も精度が高いのは？</div>
+<div class="faq-a">2026年3月時点では、Claude 4が日本語の自然さと正確性でトップ評価です。敬語や専門用語の使い分けが特に優秀です。</div>
+</div>
+<div class="faq-item">
+<div class="faq-q">SEO記事の自動生成にAIツールは使えますか？</div>
+<div class="faq-a">可能です。ただしAI生成のままではなく、独自の体験談やデータを追加することでGoogle E-E-A-Tの評価を高められます。</div>
+</div>
+</div>
+
+<!-- 6. トピッククラスター -->
+<div class="divider"></div>
+<span class="section-label">改善⑥ トピッククラスターモデル</span>
+<div class="cluster-section">
+<div class="cluster-pillar">
+<h4>🏛️ ピラーページ</h4>
+<p>【完全ガイド】AIツール総合比較2026年版</p>
+</div>
+<div class="cluster-arrow">↓ ↓ ↓ ↓</div>
+<div class="cluster-children">
+<div class="cluster-child">
+<div class="child-title">🤖 AIチャットボット比較</div>
+<div class="child-link">→ ピラーページへリンク</div>
+</div>
+<div class="cluster-child">
+<div class="child-title">✍️ AIライティングツール比較</div>
+<div class="child-link">→ ピラーページへリンク</div>
+</div>
+<div class="cluster-child">
+<div class="child-title">🎨 AI画像生成ツール比較</div>
+<div class="child-link">→ ピラーページへリンク</div>
+</div>
+<div class="cluster-child">
+<div class="child-title">💻 AIコーディングツール比較</div>
+<div class="child-link">→ ピラーページへリンク</div>
+</div>
+</div>
+<p style="font-size:12px; color:#94a3b8; margin-top:12px; text-align:center;">※ ピラー↔クラスター間で相互リンク → ドメイン権威性UP</p>
+</div>
+
+<!-- 7. Product/Review Schema -->
+<div class="divider"></div>
+<span class="section-label">改善⑦ Product/Review Schema表示</span>
+<p style="font-size:12px; color:#94a3b8; margin-bottom:8px;">※ Google検索結果にレビュー星・価格が表示される（リッチスニペット）</p>
+<div class="review-schema">
+<div class="schema-header">
+<div class="schema-product">Claude Pro</div>
+<div class="schema-rating">
+<div class="schema-score">4.8</div>
+<div class="schema-stars">★★★★★</div>
+<div class="schema-reviews">(127件のレビュー)</div>
+</div>
+</div>
+<div class="schema-details">
+<div class="schema-detail">
+<div class="detail-label">価格</div>
+<div class="detail-value">$20/月</div>
+</div>
+<div class="schema-detail">
+<div class="detail-label">日本語精度</div>
+<div class="detail-value">◎</div>
+</div>
+<div class="schema-detail">
+<div class="detail-label">コスパ</div>
+<div class="detail-value">A+</div>
+</div>
+<div class="schema-detail">
+<div class="detail-label">おすすめ度</div>
+<div class="detail-value">96%</div>
+</div>
+</div>
+</div>
+
+<!-- 8. 関連記事 -->
+<div class="divider"></div>
+<span class="section-label">改善⑧ 関連記事カード改善</span>
+<div class="related-section">
+<h2>📚 あわせて読みたい</h2>
+<div class="related-grid">
+<div class="related-card">
+<div class="related-card-img">🤖</div>
+<div class="related-card-body">
+<div class="related-card-title">Claude Code完全ガイド｜インストールから活用まで</div>
+<div class="related-card-category">AI開発ツール</div>
+</div>
+</div>
+<div class="related-card">
+<div class="related-card-img">💬</div>
+<div class="related-card-body">
+<div class="related-card-title">ChatGPT vs Gemini｜どっちを選ぶべき？</div>
+<div class="related-card-category">AIチャットボット</div>
+</div>
+</div>
+<div class="related-card">
+<div class="related-card-img">📝</div>
+<div class="related-card-body">
+<div class="related-card-title">AI文章作成で月5万円稼ぐ副業ガイド</div>
+<div class="related-card-category">AI副業</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="note">⚡ これらの改善により、検索結果でのリッチスニペット表示（星評価・価格・FAQ）+ クリック率向上 + 滞在時間増加 が期待できます</div>
+
+</div>
+</body>
+</html>
