@@ -1,5 +1,5 @@
 ---
-title: "【2026年】画像生成AI比較｜Midjourney・DALL-E・SD"
+title: "【2026年最新】画像生成AI徹底比較3選｜Midjourney・DALL-E・Stable Diffusion"
 description: "人気の画像生成AI3つを徹底比較。画質・使いやすさ・料金・商用利用の観点から、あなたに最適なツールを見つけます。"
 pubDate: "2026-03-07"
 category: "ai-tools"

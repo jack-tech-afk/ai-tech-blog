@@ -1,5 +1,5 @@
 ---
-title: "【2026年】Notion AI vs Obsidian比較｜最強ノートアプリはどっち？"
+title: "【2026年最新】Notion AI vs Obsidian徹底比較｜最強ノートアプリはどっち？"
 description: "Notion AIとObsidianを料金・AI機能・カスタマイズ性・オフライン対応など10項目で徹底比較。用途別のおすすめと選び方を解説します。"
 pubDate: "2026-03-12"
 category: "saas"

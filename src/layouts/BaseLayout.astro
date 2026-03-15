@@ -9,6 +9,17 @@ interface BreadcrumbItem {
   url: string;
 }
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface ProductData {
+  productName: string;
+  rating: number;
+  reviewCount: number;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -18,6 +29,8 @@ interface Props {
   pubDate?: string;
   updatedDate?: string;
   breadcrumbs?: BreadcrumbItem[];
+  faqItems?: FAQItem[];
+  productData?: ProductData;
 }
 
 const props = Astro.props;

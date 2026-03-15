@@ -1,5 +1,5 @@
 ---
-title: "【2026年】AI動画生成ツール比較5選｜初心者にもおすすめ"
+title: "【2026年最新】AI動画生成ツール徹底比較5選｜初心者にもおすすめ"
 description: "Sora・Runway・Pika Labsなど話題のAI動画生成ツール5つを比較。料金・品質・使いやすさを実際に試して解説します。"
 pubDate: "2026-03-09"
 category: "ai-tools"

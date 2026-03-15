@@ -4,6 +4,17 @@ interface BreadcrumbItem {
   url: string;
 }
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface ProductData {
+  productName: string;
+  rating: number;
+  reviewCount: number;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -13,6 +24,8 @@ interface Props {
   pubDate?: string;
   updatedDate?: string;
   breadcrumbs?: BreadcrumbItem[];
+  faqItems?: FAQItem[];
+  productData?: ProductData;
 }
 
 const {
@@ -24,6 +37,8 @@ const {
   pubDate,
   updatedDate,
   breadcrumbs,
+  faqItems,
+  productData,
 } = Astro.props;
 
 const siteTitle = 'AI Tech Review - AIツール・ガジェット徹底比較';
@@ -106,5 +121,49 @@ const ogImage = new URL(ogImagePath, Astro.site);
       name: item.name,
       item: item.url,
     })),
+  })} />
+)}
+
+<!-- FAQPage JSON-LD -->
+{faqItems && faqItems.length > 0 && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  })} />
+)}
+
+<!-- Product + Review JSON-LD -->
+{productData && (
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: productData.productName,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: productData.rating.toString(),
+      bestRating: '5',
+      worstRating: '1',
+      reviewCount: productData.reviewCount.toString(),
+    },
+    review: {
+      '@type': 'Review',
+      author: {
+        '@type': 'Organization',
+        name: 'AI Tech Review',
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: productData.rating.toString(),
+        bestRating: '5',
+      },
+    },
   })} />
 )}

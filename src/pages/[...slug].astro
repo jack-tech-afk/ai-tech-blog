@@ -3,6 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import AffiliateBox from '../components/AffiliateBox.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import CTABox from '../components/CTABox.astro';
+import UpdateBadge from '../components/UpdateBadge.astro';
+import FAQSection from '../components/FAQSection.astro';
+import TopicCluster from '../components/TopicCluster.astro';
+import ReviewSchema from '../components/ReviewSchema.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -86,6 +92,8 @@ const breadcrumbs = [
   pubDate={post.data.pubDate}
   updatedDate={post.data.updatedDate}
   breadcrumbs={breadcrumbs}
+  faqItems={post.data.faqItems}
+  productData={post.data.reviewSchema ? { productName: post.data.reviewSchema.productName, rating: post.data.reviewSchema.rating, reviewCount: post.data.reviewSchema.reviewCount } : undefined}
 >
   <!-- Reading Progress Bar -->
   <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
@@ -149,6 +157,30 @@ const breadcrumbs = [
 
   <!-- Article Content -->
   <article class="max-w-3xl mx-auto px-4 py-10">
+    <!-- Update Badge -->
+    <UpdateBadge
+      pubDate={post.data.pubDate}
+      updatedDate={post.data.updatedDate}
+    />
+
+    <!-- Comparison Table -->
+    {post.data.comparisonTable && post.data.comparisonTable.length > 0 && (
+      <ComparisonTable items={post.data.comparisonTable} />
+    )}
+
+    <!-- CTA Box (Top Pick) -->
+    {post.data.ctaBox && (
+      <CTABox
+        name={post.data.ctaBox.name}
+        price={post.data.ctaBox.price}
+        priceNote={post.data.ctaBox.priceNote}
+        benefits={post.data.ctaBox.benefits}
+        ctaText={post.data.ctaBox.ctaText}
+        ctaUrl={post.data.ctaBox.ctaUrl}
+        isTopPick={post.data.ctaBox.isTopPick}
+      />
+    )}
+
     <!-- Table of Contents -->
     <TableOfContents headings={headings} />
 
@@ -156,6 +188,30 @@ const breadcrumbs = [
     <div class="prose max-w-none bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
       <Content />
     </div>
+
+    <!-- Review Schema -->
+    {post.data.reviewSchema && (
+      <ReviewSchema
+        productName={post.data.reviewSchema.productName}
+        rating={post.data.reviewSchema.rating}
+        reviewCount={post.data.reviewSchema.reviewCount}
+        details={post.data.reviewSchema.details}
+      />
+    )}
+
+    <!-- FAQ Section -->
+    {post.data.faqItems && post.data.faqItems.length > 0 && (
+      <FAQSection items={post.data.faqItems} />
+    )}
+
+    <!-- Topic Cluster -->
+    {post.data.topicCluster && (
+      <TopicCluster
+        pillarTitle={post.data.topicCluster.pillarTitle}
+        pillarDescription={post.data.topicCluster.pillarDescription}
+        clusters={post.data.topicCluster.clusters}
+      />
+    )}
 
     <!-- Affiliate Boxes -->
     {post.data.affiliate && post.data.affiliate.length > 0 && (
