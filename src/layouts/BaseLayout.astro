@@ -31,15 +31,24 @@ interface Props {
   breadcrumbs?: BreadcrumbItem[];
   faqItems?: FAQItem[];
   productData?: ProductData;
+  lang?: string;
+  alternateUrl?: string;
 }
 
 const props = Astro.props;
+const lang = props.lang || 'ja';
 ---
 
 <!DOCTYPE html>
-<html lang="ja">
+<html lang={lang}>
   <head>
     <SEOHead {...props} />
+    {props.alternateUrl && lang === 'ja' && (
+      <link rel="alternate" hreflang="en" href={props.alternateUrl} />
+    )}
+    {props.alternateUrl && lang === 'en' && (
+      <link rel="alternate" hreflang="ja" href={props.alternateUrl} />
+    )}
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3397494907416647" crossorigin="anonymous" is:inline></script>
     <!-- Google Analytics -->

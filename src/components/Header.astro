@@ -1,16 +1,31 @@
 ---
-const navItems = [
+const currentPath = Astro.url.pathname;
+const isEnglish = currentPath.startsWith('/en');
+
+const navItemsJa = [
   { label: 'ホーム', href: '/' },
   { label: 'AIツール', href: '/#ai-tools' },
   { label: 'SaaS', href: '/#saas' },
   { label: 'ガジェット', href: '/#gadgets' },
   { label: '運営者情報', href: '/about' },
 ];
+
+const navItemsEn = [
+  { label: 'Home', href: '/en' },
+  { label: 'AI Tools', href: '/en#ai-tools' },
+  { label: 'SaaS', href: '/en#saas' },
+  { label: 'Gadgets', href: '/en#gadgets' },
+  { label: 'About', href: '/about' },
+];
+
+const navItems = isEnglish ? navItemsEn : navItemsJa;
+const langSwitchUrl = isEnglish ? currentPath.replace('/en', '') || '/' : `/en${currentPath}`;
+const langLabel = isEnglish ? '🇯🇵 日本語' : '🇺🇸 English';
 ---
 
 <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
   <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="/" class="text-xl font-bold text-primary-700 hover:text-primary-800 transition-colors">
+    <a href={isEnglish ? '/en' : '/'} class="text-xl font-bold text-primary-700 hover:text-primary-800 transition-colors">
       AI Tech Review
     </a>
 
@@ -26,6 +41,14 @@ const navItems = [
           </a>
         </li>
       ))}
+      <li>
+        <a
+          href={langSwitchUrl}
+          class="text-xs font-semibold px-3 py-1.5 rounded-full border border-gray-300 text-gray-600 hover:bg-primary-50 hover:border-primary-300 hover:text-primary-700 transition-all"
+        >
+          {langLabel}
+        </a>
+      </li>
     </ul>
 
     <!-- Mobile Menu Button -->
@@ -53,6 +76,14 @@ const navItems = [
           </a>
         </li>
       ))}
+      <li>
+        <a
+          href={langSwitchUrl}
+          class="block py-2 text-primary-600 font-semibold text-sm"
+        >
+          {langLabel}
+        </a>
+      </li>
     </ul>
   </div>
 </header>

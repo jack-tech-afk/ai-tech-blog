@@ -1,0 +1,310 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
+import AffiliateBox from '../../components/AffiliateBox.astro';
+import RelatedArticles from '../../components/RelatedArticles.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import CTABox from '../../components/CTABox.astro';
+import UpdateBadge from '../../components/UpdateBadge.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import TopicCluster from '../../components/TopicCluster.astro';
+import ReviewSchema from '../../components/ReviewSchema.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blogEn');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+
+const formattedDate = new Date(post.data.pubDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const categoryLabels: Record<string, string> = {
+  'ai-tools': 'AI Tools',
+  'saas': 'SaaS',
+  'gadgets': 'Gadgets',
+  'guides': 'How-to Guides',
+  'ranking': 'Rankings',
+};
+
+const categoryGradients: Record<string, string> = {
+  'ai-tools': 'from-blue-600 via-blue-700 to-indigo-800',
+  'saas': 'from-emerald-600 via-teal-600 to-cyan-700',
+  'gadgets': 'from-purple-600 via-violet-600 to-fuchsia-700',
+  'guides': 'from-amber-500 via-orange-600 to-red-600',
+  'ranking': 'from-rose-600 via-pink-600 to-red-700',
+};
+
+const categoryIcons: Record<string, string> = {
+  'ai-tools': '🤖',
+  'saas': '☁️',
+  'gadgets': '📱',
+  'guides': '📖',
+  'ranking': '🏆',
+};
+
+const gradient = categoryGradients[post.data.category] || 'from-gray-600 to-gray-800';
+const icon = categoryIcons[post.data.category] || '📝';
+
+// Estimate reading time (English: ~200 words/min)
+const wordCount = post.body?.split(/\s+/).length || 0;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+
+// Breadcrumb data
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://ai-tech-review.company';
+const categoryLabel = categoryLabels[post.data.category] || post.data.category;
+const breadcrumbs = [
+  { name: 'Home', url: `${siteUrl}/en` },
+  { name: categoryLabel, url: `${siteUrl}/en#${post.data.category}` },
+  { name: post.data.title, url: `${siteUrl}/en/${post.id}` },
+];
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  heroImage={post.data.heroImage}
+  article={true}
+  pubDate={post.data.pubDate}
+  updatedDate={post.data.updatedDate}
+  breadcrumbs={breadcrumbs}
+  faqItems={post.data.faqItems}
+  productData={post.data.reviewSchema ? { productName: post.data.reviewSchema.productName, rating: post.data.reviewSchema.rating, reviewCount: post.data.reviewSchema.reviewCount } : undefined}
+  lang="en"
+  alternateUrl={`${siteUrl}/${post.id}`}
+>
+  <!-- Reading Progress Bar -->
+  <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
+
+  <!-- Article Hero -->
+  <div class={`article-hero bg-gradient-to-br ${gradient}`}>
+    <div class="max-w-3xl mx-auto px-4 relative z-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-white/20 text-white backdrop-blur-sm">
+          <span>{icon}</span>
+          {categoryLabels[post.data.category] || post.data.category}
+        </span>
+        <div class="flex items-center gap-1.5 text-white/70 text-xs">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <time datetime={post.data.pubDate}>{formattedDate}</time>
+        </div>
+        <div class="flex items-center gap-1.5 text-white/70 text-xs">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span>{readingTime} min read</span>
+        </div>
+      </div>
+
+      <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight mb-4">
+        {post.data.title}
+      </h1>
+      <p class="text-base md:text-lg text-white/80 leading-relaxed">{post.data.description}</p>
+
+      {post.data.tags && post.data.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 mt-5">
+          {post.data.tags.map((tag: string) => (
+            <span class="text-xs bg-white/15 text-white/90 px-3 py-1 rounded-full backdrop-blur-sm font-medium">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+
+  <!-- Hero Image (if available) -->
+  {post.data.heroImage && (
+    <div class="max-w-4xl mx-auto px-4 -mt-6">
+      <img
+        src={post.data.heroImage}
+        alt={post.data.title}
+        class="w-full rounded-2xl shadow-xl border border-white/20"
+        loading="eager"
+        width="1200"
+        height="630"
+      />
+    </div>
+  )}
+
+  <!-- Article Content -->
+  <div class="article-layout">
+  <article class="article-main">
+    <!-- Update Badge -->
+    <UpdateBadge
+      pubDate={post.data.pubDate}
+      updatedDate={post.data.updatedDate}
+    />
+
+    <!-- Comparison Table -->
+    {post.data.comparisonTable && post.data.comparisonTable.length > 0 && (
+      <ComparisonTable items={post.data.comparisonTable} />
+    )}
+
+    <!-- CTA Box (Top Pick) -->
+    {post.data.ctaBox && (
+      <CTABox
+        name={post.data.ctaBox.name}
+        price={post.data.ctaBox.price}
+        priceNote={post.data.ctaBox.priceNote}
+        benefits={post.data.ctaBox.benefits}
+        ctaText={post.data.ctaBox.ctaText}
+        ctaUrl={post.data.ctaBox.ctaUrl}
+        isTopPick={post.data.ctaBox.isTopPick}
+      />
+    )}
+
+    <!-- Table of Contents -->
+    <TableOfContents headings={headings} />
+
+    <!-- Article Body -->
+    <div class="prose max-w-none bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+      <Content />
+    </div>
+
+    <!-- Review Schema -->
+    {post.data.reviewSchema && (
+      <ReviewSchema
+        productName={post.data.reviewSchema.productName}
+        rating={post.data.reviewSchema.rating}
+        reviewCount={post.data.reviewSchema.reviewCount}
+        details={post.data.reviewSchema.details}
+      />
+    )}
+
+    <!-- FAQ Section -->
+    {post.data.faqItems && post.data.faqItems.length > 0 && (
+      <FAQSection items={post.data.faqItems} />
+    )}
+
+    <!-- Topic Cluster -->
+    {post.data.topicCluster && (
+      <TopicCluster
+        pillarTitle={post.data.topicCluster.pillarTitle}
+        pillarDescription={post.data.topicCluster.pillarDescription}
+        clusters={post.data.topicCluster.clusters}
+      />
+    )}
+
+    <!-- Affiliate Boxes -->
+    {post.data.affiliate && post.data.affiliate.length > 0 && (
+      <div class="mt-10 pt-8">
+        <div class="flex items-center gap-2 mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <h2 class="text-xl font-bold text-gray-800">Products & Services in This Article</h2>
+        </div>
+        {post.data.affiliate.map((item) => (
+          <AffiliateBox
+            name={item.name}
+            url={item.url}
+            price={item.price}
+            rating={item.rating}
+            description={item.description}
+          />
+        ))}
+      </div>
+    )}
+
+    <!-- Related Articles -->
+    <RelatedArticles category={post.data.category} currentSlug={post.id} />
+
+    <!-- Share & Navigation -->
+    <div class="mt-10 pt-6 border-t border-gray-200">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="text-sm font-semibold text-gray-600">Share:</span>
+        <a
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(`https://ai-tech-review.company/en/${post.id}`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="share-btn bg-black text-white text-xs hover:bg-gray-800"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X (Twitter)
+        </a>
+        <a
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://ai-tech-review.company/en/${post.id}`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="share-btn bg-blue-600 text-white text-xs hover:bg-blue-700"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a>
+      </div>
+
+      <a href="/en" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold text-sm transition-colors group">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to All Articles
+      </a>
+    </div>
+  </article>
+
+  <!-- Sidebar -->
+  <div class="article-sidebar">
+    <Sidebar affiliate={post.data.affiliate} category={post.data.category} />
+  </div>
+  </div>
+
+  <style>
+    .article-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      gap: 2rem;
+    }
+    .article-main {
+      flex: 1;
+      min-width: 0;
+      max-width: 48rem;
+      padding: 2.5rem 1rem;
+    }
+    .article-sidebar {
+      width: 260px;
+      flex-shrink: 0;
+      padding-top: 2rem;
+    }
+    @media (max-width: 767px) {
+      .article-layout {
+        flex-direction: column;
+      }
+      .article-sidebar {
+        width: 100%;
+        padding-top: 0;
+      }
+    }
+  </style>
+
+  <!-- Reading Progress Script -->
+  <script is:inline>
+    window.addEventListener('scroll', function() {
+      var bar = document.getElementById('progress-bar');
+      if (!bar) return;
+      var scrollTop = window.scrollY;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = Math.min(progress, 100) + '%';
+    });
+  </script>
+</BaseLayout>

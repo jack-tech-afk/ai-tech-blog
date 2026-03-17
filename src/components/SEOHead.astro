@@ -26,6 +26,8 @@ interface Props {
   breadcrumbs?: BreadcrumbItem[];
   faqItems?: FAQItem[];
   productData?: ProductData;
+  lang?: string;
+  alternateUrl?: string;
 }
 
 const {
@@ -39,9 +41,11 @@ const {
   breadcrumbs,
   faqItems,
   productData,
+  lang,
 } = Astro.props;
 
-const siteTitle = 'AI Tech Review - AIツール・ガジェット徹底比較';
+const isEnglish = lang === 'en';
+const siteTitle = isEnglish ? 'AI Tech Review - AI Tools & Gadgets Comparison' : 'AI Tech Review - AIツール・ガジェット徹底比較';
 const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -67,7 +71,7 @@ const ogImage = new URL(ogImagePath, Astro.site);
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
 <meta property="og:site_name" content={siteTitle} />
-<meta property="og:locale" content="ja_JP" />
+<meta property="og:locale" content={isEnglish ? 'en_US' : 'ja_JP'} />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
