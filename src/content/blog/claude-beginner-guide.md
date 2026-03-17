@@ -1,10 +1,10 @@
 ---
-title: "【2026年最新】Claude入門ガイド｜ChatGPTとの違いと使い方を初心者向けに解説"
-description: "Anthropic社のAIチャット「Claude」の始め方・使い方を初心者向けに解説。ChatGPTとの違い、得意分野、アカウント作成方法まで網羅。"
+title: "Claude使い方入門【2026年】ChatGPTとの違いも解説"
+description: "Claude AIの始め方・使い方を初心者向けに解説。ChatGPTとの違いや得意分野も紹介。"
 pubDate: "2026-03-17"
 category: "guides"
 heroImage: "/images/heroes/claude-beginner-guide.png"
-tags: ["Claude", "Anthropic", "AI入門", "初心者"]
+tags: ["Claude", "Anthropic", "AI入門", "初心者", "使い方", "ChatGPTとの違い"]
 affiliate:
   - name: "Claude Pro"
     url: "https://claude.ai/upgrade"

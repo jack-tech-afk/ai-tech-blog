@@ -1,10 +1,10 @@
 ---
-title: "【2026年保存版】ChatGPTプロンプト完全ガイド！仕事で使える実用テクニック30選"
-description: "ChatGPTの効果的なプロンプトの書き方を完全解説。ビジネスメール、企画書、プログラミング、翻訳など実用的な活用テクニックを30個紹介。"
+title: "ChatGPTプロンプト術30選【2026年】仕事で使えるコツ"
+description: "ChatGPTプロンプトの書き方を完全解説。ビジネスで使える実用テクニック30選を紹介。"
 pubDate: "2026-03-03"
 category: "guides"
 heroImage: "/images/heroes/chatgpt-prompt-guide.png"
-tags: ["ChatGPT", "プロンプト", "活用術", "仕事効率化"]
+tags: ["ChatGPT", "プロンプト", "活用術", "仕事効率化", "テンプレート", "書き方"]
 affiliate:
   - name: "ChatGPT Plus"
     url: "https://chatgpt.com/#pricing"

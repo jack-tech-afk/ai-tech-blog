@@ -1,10 +1,10 @@
 ---
-title: "【2026年最新】画像生成AI徹底比較3選｜Midjourney・DALL-E・Stable Diffusion"
-description: "人気の画像生成AI3つを徹底比較。画質・使いやすさ・料金・商用利用の観点から、あなたに最適なツールを見つけます。"
+title: "画像生成AI比較3選【2026年】Midjourney・DALL-E・SD"
+description: "画像生成AI3つを画質・料金・商用利用で徹底比較。あなたに最適なツールが見つかります。"
 pubDate: "2026-03-07"
 category: "ai-tools"
 heroImage: "/images/heroes/ai-image-generation.png"
-tags: ["画像生成AI", "Midjourney", "DALL-E", "Stable Diffusion"]
+tags: ["画像生成AI", "Midjourney", "DALL-E", "Stable Diffusion", "AI画像", "比較"]
 affiliate:
   - name: "Midjourney"
     url: "https://www.midjourney.com/"

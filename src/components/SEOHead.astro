@@ -61,6 +61,8 @@ const ogImage = new URL(ogImagePath, Astro.site);
 <!-- Primary Meta -->
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 <link rel="canonical" href={canonicalURL} />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -87,21 +89,31 @@ const ogImage = new URL(ogImagePath, Astro.site);
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonicalURL.toString(),
+    },
     headline: title,
     description: description,
     image: ogImage.toString(),
     datePublished: pubDate,
     dateModified: updatedDate || pubDate,
+    url: canonicalURL.toString(),
+    inLanguage: isEnglish ? 'en' : 'ja',
     author: {
       '@type': 'Organization',
       name: 'AI Tech Review',
+      url: Astro.site?.toString(),
     },
     publisher: {
       '@type': 'Organization',
       name: 'AI Tech Review',
+      url: Astro.site?.toString(),
       logo: {
         '@type': 'ImageObject',
         url: new URL('/favicon.svg', Astro.site).toString(),
+        width: 512,
+        height: 512,
       },
     },
   })} />

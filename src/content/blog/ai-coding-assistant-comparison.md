@@ -1,6 +1,6 @@
 ---
-title: "【2026年最新】AIコーディングアシスタント徹底比較7選｜Cursor・Copilot・Claude Code"
-description: "Cursor、GitHub Copilot、Claude Code、Cody、Tabnineなど主要AIコーディングアシスタント7つを料金・機能・対応言語で徹底比較。エンジニア向けに最適な選び方を解説。"
+title: "AIコーディングアシスタント比較7選【2026年最新】"
+description: "Cursor・Copilot・Claude Codeなど主要7ツールを料金・機能で徹底比較。最適な選び方を解説。"
 pubDate: "2026-03-12"
 updatedDate: "2026-03-14"
 category: "ai-tools"

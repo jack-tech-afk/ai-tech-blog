@@ -1,6 +1,6 @@
 ---
-title: "【2026年最新】Google Gemini入門ガイド｜無料で使えるGoogleのAIを徹底解説"
-description: "Google Geminiの使い方を初心者向けに完全解説。無料プランでできること、Gmail・Docs連携、ChatGPTとの違いまで、Googleが提供するAIアシスタントの始め方がわかります。"
+title: "Google Gemini入門【2026年】無料AIの使い方を徹底解説"
+description: "Google Geminiの使い方を初心者向けに解説。無料でできること・Gmail連携・ChatGPTとの違いを紹介。"
 pubDate: "2026-03-17"
 category: "guides"
 tags: ["Gemini", "Google", "AI入門", "初心者", "無料"]

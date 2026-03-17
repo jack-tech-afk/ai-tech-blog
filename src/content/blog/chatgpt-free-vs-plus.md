@@ -1,10 +1,10 @@
 ---
-title: "ChatGPT無料版とPlus版の違いを徹底比較！初心者はどちらを選ぶべき？"
-description: "ChatGPTの無料版とPlus版（月額20ドル）の違いを機能・性能・コスパの観点から徹底比較。初心者が最適なプランを選ぶための判断基準を解説します。"
+title: "ChatGPT無料版 vs Plus比較【2026年】どっちがお得？"
+description: "ChatGPT無料版とPlus版の違いを機能・性能・コスパで徹底比較。最適なプラン選びを解説。"
 pubDate: "2026-03-17"
 category: "ai-tools"
 heroImage: "/images/heroes/chatgpt-free-vs-plus.png"
-tags: ["ChatGPT", "ChatGPT Plus", "料金比較", "初心者"]
+tags: ["ChatGPT", "ChatGPT Plus", "料金比較", "初心者", "無料版", "プラン選び"]
 affiliate:
   - name: "ChatGPT Plus"
     url: "https://chatgpt.com/#pricing"

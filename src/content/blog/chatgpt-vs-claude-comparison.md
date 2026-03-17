@@ -1,11 +1,11 @@
 ---
-title: "【2026年最新】ChatGPT vs Claude徹底比較！どっちがおすすめか完全ガイド"
-description: "ChatGPTとClaudeを料金・性能・使いやすさで徹底比較。AIチャットボット選びで迷っている方に、目的別のおすすめを解説します。"
+title: "ChatGPT vs Claude徹底比較【2026年】どっちがおすすめ？"
+description: "ChatGPTとClaudeを料金・性能・使いやすさで徹底比較。目的別おすすめを解説。"
 pubDate: "2026-03-10"
 updatedDate: "2026-03-14"
 category: "ai-tools"
 heroImage: "/images/heroes/chatgpt-vs-claude.png"
-tags: ["ChatGPT", "Claude", "AI比較", "生成AI"]
+tags: ["ChatGPT", "Claude", "AI比較", "生成AI", "AIチャットボット", "おすすめ"]
 affiliate:
   - name: "ChatGPT Plus"
     url: "https://chatgpt.com/#pricing"

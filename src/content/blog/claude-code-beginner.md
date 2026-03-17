@@ -1,6 +1,6 @@
 ---
-title: "Claude Code入門｜ターミナルで動くAIコーディングアシスタントの使い方"
-description: "Anthropic公式のAIコーディングツール「Claude Code」の使い方を初心者向けに解説。インストールから基本コマンド、実際の開発フロー、Cursorとの違いまで詳しく紹介します。"
+title: "Claude Code使い方入門【2026年】インストールから実践まで"
+description: "Claude Codeの使い方を初心者向けに解説。インストール・基本コマンド・Cursorとの違いを紹介。"
 pubDate: "2026-03-17"
 category: "guides"
 heroImage: "/images/heroes/claude-code-beginner.png"

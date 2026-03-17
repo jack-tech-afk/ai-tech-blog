@@ -1,6 +1,6 @@
 ---
-title: "AIチャットボット比較｜ChatGPT・Claude・Gemini・Copilot 初心者向け完全ガイド"
-description: "ChatGPT・Claude・Gemini・Copilotの4大AIチャットボットを徹底比較。性能・料金・日本語対応・得意分野を初心者向けにわかりやすく解説します。"
+title: "AIチャットボット4大比較【2026年】初心者向けガイド"
+description: "ChatGPT・Claude・Gemini・Copilotを性能・料金・日本語対応で徹底比較。初心者向け。"
 pubDate: "2026-03-17"
 category: "ranking"
 heroImage: "/images/heroes/ai-chatbot-comparison-beginner.png"

@@ -1,10 +1,10 @@
 ---
-title: "【2026年最新】ChatGPT入門ガイド｜初心者でも5分でわかる使い方"
-description: "ChatGPTとは何か？アカウント作成から基本的な使い方、活用例まで初心者向けにわかりやすく解説。2026年最新情報対応。"
+title: "ChatGPT使い方入門【2026年】初心者向け完全ガイド"
+description: "ChatGPTのアカウント作成から使い方・活用例まで初心者向けにわかりやすく解説。"
 pubDate: "2026-03-17"
 category: "guides"
 heroImage: "/images/heroes/chatgpt-beginner-guide.png"
-tags: ["ChatGPT", "AI入門", "初心者", "使い方"]
+tags: ["ChatGPT", "AI入門", "初心者", "使い方", "始め方", "生成AI"]
 affiliate:
   - name: "ChatGPT Plus"
     url: "https://chatgpt.com/#pricing"
