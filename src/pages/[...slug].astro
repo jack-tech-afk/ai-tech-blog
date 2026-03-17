@@ -9,6 +9,7 @@ import UpdateBadge from '../components/UpdateBadge.astro';
 import FAQSection from '../components/FAQSection.astro';
 import TopicCluster from '../components/TopicCluster.astro';
 import ReviewSchema from '../components/ReviewSchema.astro';
+import Sidebar from '../components/Sidebar.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -156,7 +157,8 @@ const breadcrumbs = [
   )}
 
   <!-- Article Content -->
-  <article class="max-w-3xl mx-auto px-4 py-10">
+  <div class="article-layout">
+  <article class="article-main">
     <!-- Update Badge -->
     <UpdateBadge
       pubDate={post.data.pubDate}
@@ -272,6 +274,42 @@ const breadcrumbs = [
       </a>
     </div>
   </article>
+
+  <!-- Sidebar -->
+  <div class="article-sidebar">
+    <Sidebar affiliate={post.data.affiliate} category={post.data.category} />
+  </div>
+  </div>
+
+  <style>
+    .article-layout {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      gap: 2rem;
+    }
+    .article-main {
+      flex: 1;
+      min-width: 0;
+      max-width: 48rem;
+      padding: 2.5rem 1rem;
+    }
+    .article-sidebar {
+      width: 260px;
+      flex-shrink: 0;
+      padding-top: 2rem;
+    }
+    @media (max-width: 767px) {
+      .article-layout {
+        flex-direction: column;
+      }
+      .article-sidebar {
+        width: 100%;
+        padding-top: 0;
+      }
+    }
+  </style>
 
   <!-- Reading Progress Script -->
   <script is:inline>

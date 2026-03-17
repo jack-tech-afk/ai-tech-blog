@@ -1,0 +1,320 @@
+---
+interface AffiliateItem {
+  name: string;
+  url: string;
+  price: string;
+  description: string;
+}
+
+interface Props {
+  affiliate?: AffiliateItem[];
+  category?: string;
+}
+
+const { affiliate = [], category } = Astro.props;
+
+const TAG = "mamanomikata2-22";
+
+// Category-specific product recommendations
+const categoryAds: Record<string, { name: string; search: string; label: string }[]> = {
+  "ai-tools": [
+    { name: "ChatGPT Plus", search: "ChatGPT+解説+書籍", label: "AI活用の必読書" },
+    { name: "AI関連書籍", search: "人工知能+入門+書籍", label: "AIを基礎から学ぶ" },
+    { name: "Webカメラ", search: "Webカメラ+高画質+AI", label: "AI会議に" },
+  ],
+  "AIツール": [
+    { name: "ChatGPT Plus", search: "ChatGPT+解説+書籍", label: "AI活用の必読書" },
+    { name: "AI関連書籍", search: "人工知能+入門+書籍", label: "AIを基礎から学ぶ" },
+    { name: "Webカメラ", search: "Webカメラ+高画質+AI", label: "AI会議に" },
+  ],
+  "saas": [
+    { name: "モニターアーム", search: "モニターアーム+デスク", label: "デスク環境改善" },
+    { name: "メカニカルキーボード", search: "メカニカルキーボード+静音", label: "タイピング効率UP" },
+    { name: "ノイキャンイヤホン", search: "ノイズキャンセリング+イヤホン", label: "集中力UP" },
+  ],
+  "SaaS": [
+    { name: "モニターアーム", search: "モニターアーム+デスク", label: "デスク環境改善" },
+    { name: "メカニカルキーボード", search: "メカニカルキーボード+静音", label: "タイピング効率UP" },
+    { name: "ノイキャンイヤホン", search: "ノイズキャンセリング+イヤホン", label: "集中力UP" },
+  ],
+  "gadgets": [
+    { name: "ワイヤレスイヤホン", search: "ワイヤレスイヤホン+2026", label: "人気ランキング" },
+    { name: "4Kモニター", search: "4Kモニター+27インチ", label: "作業効率UP" },
+    { name: "USB-Cハブ", search: "USB-C+ハブ+多機能", label: "接続の必需品" },
+  ],
+  "ガジェット": [
+    { name: "ワイヤレスイヤホン", search: "ワイヤレスイヤホン+2026", label: "人気ランキング" },
+    { name: "4Kモニター", search: "4Kモニター+27インチ", label: "作業効率UP" },
+    { name: "USB-Cハブ", search: "USB-C+ハブ+多機能", label: "接続の必需品" },
+  ],
+  "guides": [
+    { name: "プログラミング書籍", search: "プログラミング+入門+2026", label: "スキルアップ" },
+    { name: "デスクライト", search: "デスクライト+LED+調光", label: "目に優しい" },
+    { name: "スタンディングデスク", search: "スタンディングデスク+電動", label: "健康的に作業" },
+  ],
+  "使い方ガイド": [
+    { name: "プログラミング書籍", search: "プログラミング+入門+2026", label: "スキルアップ" },
+    { name: "デスクライト", search: "デスクライト+LED+調光", label: "目に優しい" },
+    { name: "スタンディングデスク", search: "スタンディングデスク+電動", label: "健康的に作業" },
+  ],
+  "ranking": [
+    { name: "Amazonベストセラー", search: "パソコン周辺機器+ベストセラー", label: "売れ筋をチェック" },
+    { name: "外付けSSD", search: "外付けSSD+1TB+高速", label: "データ保存に" },
+    { name: "ワイヤレスマウス", search: "ワイヤレスマウス+エルゴノミクス", label: "疲れにくい" },
+  ],
+  "ランキング": [
+    { name: "Amazonベストセラー", search: "パソコン周辺機器+ベストセラー", label: "売れ筋をチェック" },
+    { name: "外付けSSD", search: "外付けSSD+1TB+高速", label: "データ保存に" },
+    { name: "ワイヤレスマウス", search: "ワイヤレスマウス+エルゴノミクス", label: "疲れにくい" },
+  ],
+};
+
+const ads = categoryAds[category ?? ""] ?? categoryAds["ai-tools"];
+
+function amazonSearchUrl(search: string) {
+  return `https://www.amazon.co.jp/s?k=${encodeURIComponent(search)}&tag=${TAG}`;
+}
+---
+
+<aside class="sidebar">
+  <!-- AD Section -->
+  <div class="ad-section">
+    <div class="ad-label">AD</div>
+    <div class="ad-title">おすすめアイテム</div>
+
+    <div class="ad-items">
+      {ads.map((ad) => (
+        <a
+          href={amazonSearchUrl(ad.search)}
+          target="_blank"
+          rel="nofollow noopener sponsored"
+          class="ad-item"
+        >
+          <div class="ad-item-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <div class="ad-item-content">
+            <div class="ad-item-name">{ad.name}</div>
+            <div class="ad-item-label">{ad.label}</div>
+          </div>
+          <div class="ad-item-arrow">›</div>
+        </a>
+      ))}
+    </div>
+
+    <a
+      href={`https://www.amazon.co.jp/gp/bestsellers/computers/&tag=${TAG}`}
+      target="_blank"
+      rel="nofollow noopener sponsored"
+      class="ad-banner"
+    >
+      <div class="ad-banner-icon">💻</div>
+      <div class="ad-banner-text">
+        <div class="ad-banner-title">Amazon PC周辺機器</div>
+        <div class="ad-banner-sub">売れ筋ランキングを見る →</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Article affiliate items -->
+  {affiliate.length > 0 && (
+    <div class="ad-section">
+      <div class="ad-label">PR</div>
+      <div class="ad-title">この記事のおすすめ</div>
+      <div class="ad-items">
+        {affiliate.slice(0, 3).map((item) => (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="nofollow noopener sponsored"
+            class="ad-item"
+          >
+            <div class="ad-item-content" style="flex:1">
+              <div class="ad-item-name">{item.name}</div>
+              <div class="ad-item-price">{item.price}</div>
+            </div>
+            <div class="ad-item-arrow">›</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- Amazon deals -->
+  <div class="ad-section">
+    <a
+      href={`https://www.amazon.co.jp/deals?tag=${TAG}`}
+      target="_blank"
+      rel="nofollow noopener sponsored"
+      class="ad-banner amazon-deals"
+    >
+      <div class="ad-banner-text">
+        <div class="ad-banner-title">Amazon タイムセール</div>
+        <div class="ad-banner-sub">本日のお得な商品をチェック →</div>
+      </div>
+    </a>
+  </div>
+</aside>
+
+<style>
+  .sidebar {
+    position: sticky;
+    top: 5rem;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    scrollbar-width: thin;
+  }
+
+  .ad-section {
+    background: #1a1a2e;
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid #2a2a4a;
+  }
+
+  .ad-label {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #888;
+    background: #2a2a4a;
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+  }
+
+  .ad-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #e0e0e0;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3b82f6;
+  }
+
+  .ad-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .ad-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+  }
+
+  .ad-item:hover {
+    background: #252545;
+    border-color: #FF9900;
+    transform: translateX(2px);
+  }
+
+  .ad-item-icon {
+    width: 32px;
+    height: 32px;
+    background: #252545;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF9900;
+    flex-shrink: 0;
+  }
+
+  .ad-item-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .ad-item-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    line-height: 1.3;
+  }
+
+  .ad-item-label {
+    font-size: 0.68rem;
+    color: #888;
+    margin-top: 0.15rem;
+  }
+
+  .ad-item-price {
+    font-size: 0.72rem;
+    color: #FF9900;
+    font-weight: 600;
+    margin-top: 0.15rem;
+  }
+
+  .ad-item-arrow {
+    font-size: 1.2rem;
+    color: #555;
+    flex-shrink: 0;
+    transition: color 0.2s;
+  }
+
+  .ad-item:hover .ad-item-arrow {
+    color: #FF9900;
+  }
+
+  .ad-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #FF9900 0%, #e68a00 100%);
+    margin-top: 0.75rem;
+    transition: all 0.2s;
+  }
+
+  .ad-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 153, 0, 0.3);
+  }
+
+  .ad-banner-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .ad-banner-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .ad-banner-sub {
+    font-size: 0.68rem;
+    opacity: 0.9;
+    margin-top: 0.1rem;
+  }
+
+  .amazon-deals {
+    background: linear-gradient(135deg, #232f3e 0%, #37475a 100%);
+    margin-top: 0;
+  }
+
+  .amazon-deals:hover {
+    box-shadow: 0 4px 12px rgba(35, 47, 62, 0.3);
+  }
+
+  @media (max-width: 767px) {
+    .sidebar {
+      position: static;
+      max-height: none;
+    }
+  }
+</style>
