@@ -17,8 +17,8 @@ const isEnglish = Astro.url.pathname.startsWith('/en');
 const TAG = isEnglish ? "aitechreview2-20" : "mamanomikata2-22";
 const AMAZON_DOMAIN = isEnglish ? "www.amazon.com" : "www.amazon.co.jp";
 
-// Category-specific product recommendations
-const categoryAds: Record<string, { name: string; search: string; label: string }[]> = {
+// Category-specific product recommendations (JP)
+const categoryAdsJP: Record<string, { name: string; search: string; label: string }[]> = {
   "ai-tools": [
     { name: "ChatGPT Plus", search: "ChatGPT+解説+書籍", label: "AI活用の必読書" },
     { name: "AI関連書籍", search: "人工知能+入門+書籍", label: "AIを基礎から学ぶ" },
@@ -71,7 +71,38 @@ const categoryAds: Record<string, { name: string; search: string; label: string 
   ],
 };
 
-const ads = categoryAds[category ?? ""] ?? categoryAds["ai-tools"];
+// Category-specific product recommendations (EN)
+const categoryAdsEN: Record<string, { name: string; search: string; label: string }[]> = {
+  "ai-tools": [
+    { name: "AI & ChatGPT Books", search: "ChatGPT+AI+book+guide", label: "Must-read for AI users" },
+    { name: "AI Programming", search: "artificial+intelligence+programming+book", label: "Learn AI fundamentals" },
+    { name: "HD Webcam", search: "webcam+HD+AI+streaming", label: "For AI meetings" },
+  ],
+  "saas": [
+    { name: "Monitor Arm", search: "monitor+arm+desk+mount", label: "Upgrade your desk" },
+    { name: "Mechanical Keyboard", search: "mechanical+keyboard+quiet", label: "Type faster" },
+    { name: "ANC Earbuds", search: "noise+cancelling+earbuds", label: "Stay focused" },
+  ],
+  "gadgets": [
+    { name: "Wireless Earbuds", search: "wireless+earbuds+2026+best", label: "Popular picks" },
+    { name: "4K Monitor", search: "4K+monitor+27+inch", label: "Boost productivity" },
+    { name: "USB-C Hub", search: "USB-C+hub+multiport", label: "Essential accessory" },
+  ],
+  "guides": [
+    { name: "Programming Books", search: "programming+beginner+book+2026", label: "Level up skills" },
+    { name: "Desk Lamp", search: "desk+lamp+LED+dimmable", label: "Eye-friendly" },
+    { name: "Standing Desk", search: "standing+desk+electric", label: "Work healthier" },
+  ],
+  "ranking": [
+    { name: "Bestsellers", search: "computer+accessories+bestseller", label: "Top sellers" },
+    { name: "External SSD", search: "external+SSD+1TB+fast", label: "Fast storage" },
+    { name: "Wireless Mouse", search: "wireless+mouse+ergonomic", label: "Comfortable grip" },
+  ],
+};
+
+const categoryAds = isEnglish ? categoryAdsEN : categoryAdsJP;
+
+const ads = categoryAds[category ?? ""] ?? (isEnglish ? categoryAdsEN["ai-tools"] : categoryAdsJP["ai-tools"]);
 
 function amazonSearchUrl(search: string) {
   return `https://${AMAZON_DOMAIN}/s?k=${encodeURIComponent(search)}&tag=${TAG}`;

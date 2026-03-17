@@ -15,7 +15,7 @@ affiliate:
     price: "$20/month"
     rating: 4.5
   - name: "Mirai Translate"
-    url: "https://www.amazon.com/s?k=%E3%81%BF%E3%82%89%E3%81%84%E7%BF%BB%E8%A8%B3&tag=aitechreview2-20"
+    url: "https://www.amazon.com/s?k=Mirai+Translate&tag=aitechreview2-20"
     price: "Contact for pricing"
     rating: 4.4
 comparisonTable:
