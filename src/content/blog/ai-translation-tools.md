@@ -7,15 +7,15 @@ heroImage: "/images/heroes/ai-translation-tools.png"
 tags: ["AI翻訳", "DeepL", "Google翻訳", "ChatGPT", "翻訳ツール"]
 affiliate:
   - name: "DeepL Pro"
-    url: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fwww.deepl.com%2Fpro"
+    url: "https://www.amazon.co.jp/s?k=DeepL%20Pro&tag=mamanomikata2-22"
     price: "月額750円〜"
     rating: 4.8
   - name: "ChatGPT Plus"
-    url: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fchatgpt.com%2F%23pricing"
+    url: "https://www.amazon.co.jp/s?k=ChatGPT%20Plus&tag=mamanomikata2-22"
     price: "月額20ドル（約3,000円）"
     rating: 4.5
   - name: "みらい翻訳"
-    url: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fmiraitranslate.com%2F"
+    url: "https://www.amazon.co.jp/s?k=%E3%81%BF%E3%82%89%E3%81%84%E7%BF%BB%E8%A8%B3&tag=mamanomikata2-22"
     price: "要問合せ"
     rating: 4.4
 comparisonTable:
@@ -60,7 +60,7 @@ ctaBox:
   priceNote: "（Starterプラン）"
   benefits: ["翻訳品質が圧倒的に自然", "文書まるごと翻訳対応", "セキュリティ万全（データ削除保証）", "Word・PDF・PPTファイル対応"]
   ctaText: "DeepL Proを試す"
-  ctaUrl: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fwww.deepl.com%2Fpro"
+  ctaUrl: "https://www.amazon.co.jp/s?k=DeepL%20Pro&tag=mamanomikata2-22"
   isTopPick: true
 reviewSchema:
   productName: "DeepL Pro"
@@ -128,7 +128,7 @@ AI翻訳ツールを選ぶ際に注目すべきポイントは以下の通りで
 
 DeepLの訳文は「翻訳っぽさ」が少なく、まるで人間が書いたかのような自然な文章になるのが最大の特徴です。
 
-[DeepL Proを試す](https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fwww.deepl.com%2Fpro)
+[DeepL Proを試す](https://www.amazon.co.jp/s?k=DeepL%20Pro&tag=mamanomikata2-22)
 
 ### 2. Google翻訳 - 圧倒的な言語カバレッジ
 

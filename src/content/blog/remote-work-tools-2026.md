@@ -7,15 +7,15 @@ heroImage: "/images/heroes/remote-work-tools-2026.png"
 tags: ["リモートワーク", "在宅勤務", "SaaS", "生産性向上", "テレワーク"]
 affiliate:
   - name: "Notion（チームプラン）"
-    url: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fwww.notion.so%2Fpricing"
+    url: "https://www.amazon.co.jp/s?k=Notion%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=mamanomikata2-22"
     price: "月額8ドル/人〜"
     rating: 4.7
   - name: "1Password（ビジネス）"
-    url: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2F1password.com%2Fbusiness"
+    url: "https://www.amazon.co.jp/s?k=1Password%EF%BC%88%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%EF%BC%89&tag=mamanomikata2-22"
     price: "月額7.99ドル/人"
     rating: 4.6
   - name: "NordVPN（法人向け）"
-    url: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fnordvpn.com%2Fbusiness"
+    url: "https://www.amazon.co.jp/s?k=NordVPN%EF%BC%88%E6%B3%95%E4%BA%BA%E5%90%91%E3%81%91%EF%BC%89&tag=mamanomikata2-22"
     price: "月額7ドル/人〜"
     rating: 4.5
 comparisonTable:
@@ -60,7 +60,7 @@ ctaBox:
   priceNote: "（年払い時）"
   benefits: ["ドキュメント・Wiki・タスク管理を一元化", "AI機能で文章作成を効率化", "チーム全体のナレッジ共有", "豊富なテンプレートで即導入可能"]
   ctaText: "Notionを無料で始める"
-  ctaUrl: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fwww.notion.so%2Fpricing"
+  ctaUrl: "https://www.amazon.co.jp/s?k=Notion%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=mamanomikata2-22"
   isTopPick: true
 reviewSchema:
   productName: "リモートワークツール総合"
@@ -154,7 +154,7 @@ Slackの強みは**2,400以上のアプリ連携**です。Google Drive、Notion
 
 リモートチームのナレッジベースとして、社内Wiki・議事録・仕様書・マニュアルなどを一元管理できます。**Notion AI**を活用すれば、文章の生成・要約・翻訳もワークスペース内で完結します。
 
-[Notionを無料で始める](https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fwww.notion.so%2Fpricing)
+[Notionを無料で始める](https://www.amazon.co.jp/s?k=Notion%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=mamanomikata2-22)
 
 ### 5. Google Workspace - クラウドオフィスの王道
 
@@ -186,7 +186,7 @@ Slackの強みは**2,400以上のアプリ連携**です。Google Drive、Notion
 
 チーム共有ボールト機能で、サービスのログイン情報をセキュアに共有できます。新メンバーのオンボーディングや退職時のアクセス管理も効率的に行えます。
 
-[1Passwordを試す](https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2F1password.com%2Fbusiness)
+[1Passwordを試す](https://www.amazon.co.jp/s?k=1Password%EF%BC%88%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%EF%BC%89&tag=mamanomikata2-22)
 
 ### 9. NordVPN - リモートアクセスのセキュリティ
 
@@ -194,7 +194,7 @@ Slackの強みは**2,400以上のアプリ連携**です。Google Drive、Notion
 
 通信の暗号化により、公共ネットワーク上でも安全に社内システムへアクセスできます。法人向けプランでは、チームメンバーのVPN利用を一括管理できます。
 
-[NordVPNを試す](https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fnordvpn.com%2Fbusiness)
+[NordVPNを試す](https://www.amazon.co.jp/s?k=NordVPN%EF%BC%88%E6%B3%95%E4%BA%BA%E5%90%91%E3%81%91%EF%BC%89&tag=mamanomikata2-22)
 
 ## 生産性向上ツール
 

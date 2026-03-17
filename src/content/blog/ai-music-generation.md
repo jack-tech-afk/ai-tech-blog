@@ -7,15 +7,15 @@ heroImage: "/images/heroes/ai-music-generation.png"
 tags: ["AI音楽", "Suno", "Udio", "AIVA", "音楽生成AI"]
 affiliate:
   - name: "Suno"
-    url: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fsuno.com%2F"
+    url: "https://www.amazon.co.jp/s?k=Suno&tag=mamanomikata2-22"
     price: "無料〜月額10ドル"
     rating: 4.7
   - name: "Udio"
-    url: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fwww.udio.com%2F"
+    url: "https://www.amazon.co.jp/s?k=Udio&tag=mamanomikata2-22"
     price: "無料〜月額10ドル"
     rating: 4.5
   - name: "AIVA"
-    url: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fwww.aiva.ai%2F"
+    url: "https://www.amazon.co.jp/s?k=AIVA&tag=mamanomikata2-22"
     price: "無料〜月額11ユーロ"
     rating: 4.4
 comparisonTable:
@@ -60,7 +60,7 @@ ctaBox:
   priceNote: "（約1,500円）"
   benefits: ["日本語歌詞の楽曲生成対応", "テキストから数秒で楽曲完成", "ポップス・ロック・ジャズ等多ジャンル", "商用利用可能（有料プラン）"]
   ctaText: "Sunoを無料で試す"
-  ctaUrl: "https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fsuno.com%2F"
+  ctaUrl: "https://www.amazon.co.jp/s?k=Suno&tag=mamanomikata2-22"
   isTopPick: true
 reviewSchema:
   productName: "Suno"
@@ -129,7 +129,7 @@ AI音楽生成ツールとは、人工知能が作曲・編曲・歌声の生成
 
 Sunoの最大の強みは**歌声の自然さ**です。ポップス、ロック、ジャズ、EDM、演歌まで幅広いジャンルに対応し、日本語の歌詞も驚くほど自然に歌い上げます。
 
-[Sunoを無料で試す](https://af.moshimo.com/af/c/click?a_id=5419817&p_id=1&pc_id=1&pl_id=1&url=https%3A%2F%2Fsuno.com%2F)
+[Sunoを無料で試す](https://www.amazon.co.jp/s?k=Suno&tag=mamanomikata2-22)
 
 ### 2. Udio（ユーディオ）- 高音質にこだわるなら
 
