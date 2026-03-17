@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const toolDefinitions = [
+  { id: 'chatgpt', label: 'ChatGPT', icon: '💬', gradient: 'from-green-600 via-emerald-600 to-teal-700', tags: ['ChatGPT', 'ChatGPT Plus'], description: 'The world\'s most popular AI chatbot by OpenAI. Handles writing, translation, coding, analysis, and more.' },
+  { id: 'claude', label: 'Claude', icon: '🟠', gradient: 'from-orange-500 via-amber-600 to-orange-700', tags: ['Claude', 'Anthropic', 'Claude Code'], description: 'Anthropic\'s AI assistant known for nuanced writing, long-context understanding, and safety-focused design.' },
+  { id: 'gemini', label: 'Google Gemini', icon: '✨', gradient: 'from-blue-500 via-indigo-600 to-blue-700', tags: ['Gemini', 'Google'], description: 'Google\'s multimodal AI with seamless integration into Gmail, Docs, Sheets, and other Google services.' },
+  { id: 'copilot', label: 'Microsoft Copilot', icon: '🔷', gradient: 'from-blue-600 via-blue-700 to-indigo-800', tags: ['Microsoft Copilot', 'Copilot'], description: 'Microsoft\'s AI assistant integrated into Word, Excel, PowerPoint, Teams, and Outlook.' },
+  { id: 'midjourney', label: 'Midjourney', icon: '🎨', gradient: 'from-purple-600 via-violet-600 to-fuchsia-700', tags: ['Midjourney'], description: 'Premium AI image generator known for stunning, artistic outputs. Popular among designers and creatives.' },
+  { id: 'dall-e', label: 'DALL-E', icon: '🖼️', gradient: 'from-teal-500 via-cyan-600 to-blue-600', tags: ['DALL-E'], description: 'OpenAI\'s image generation AI, accessible directly through ChatGPT for quick and easy image creation.' },
+  { id: 'perplexity', label: 'Perplexity AI', icon: '🔍', gradient: 'from-sky-500 via-blue-600 to-indigo-600', tags: ['Perplexity', 'AI Search'], description: 'Next-generation AI search engine that provides sourced answers. Perfect for research and fact-checking.' },
+  { id: 'cursor', label: 'Cursor', icon: '⌨️', gradient: 'from-gray-700 via-gray-800 to-gray-900', tags: ['Cursor', 'AI Coding'], description: 'AI-powered code editor built on VS Code. Features AI code completion, generation, and refactoring.' },
+];
+
+export function getStaticPaths() {
+  const tools = ['chatgpt', 'claude', 'gemini', 'copilot', 'midjourney', 'dall-e', 'perplexity', 'cursor'];
+  return tools.map((tool) => ({ params: { tool } }));
+}
+
+const { tool } = Astro.params;
+const toolDef = toolDefinitions.find((t) => t.id === tool)!;
+
+const allPosts = await getCollection('blogEn');
+const toolPosts = allPosts
+  .filter((post) => toolDef.tags.some((tag) => post.data.tags?.includes(tag)))
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+const beginnerPosts = toolPosts.filter((p) => p.data.tags?.some((t: string) => t.toLowerCase().includes('beginner')));
+const otherPosts = toolPosts.filter((p) => !p.data.tags?.some((t: string) => t.toLowerCase().includes('beginner')));
+---
+
+<BaseLayout
+  title={`${toolDef.label} Guides & Reviews | AI Tech Review`}
+  description={`All articles about ${toolDef.label}. Beginner guides, reviews, comparisons, and tips.`}
+  lang="en"
+  alternateUrl={`https://ai-tech-review.company/tools/${tool}`}
+>
+  <!-- Hero -->
+  <section class={`relative bg-gradient-to-br ${toolDef.gradient} text-white py-16 overflow-hidden`}>
+    <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+      <span class="text-5xl mb-4 block">{toolDef.icon}</span>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        {toolDef.label}
+      </h1>
+      <p class="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+        {toolDef.description}
+      </p>
+      <div class="mt-4 inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-sm font-medium px-4 py-2 rounded-full">
+        {toolPosts.length} articles
+      </div>
+    </div>
+  </section>
+
+  <!-- Beginner Articles -->
+  {beginnerPosts.length > 0 && (
+    <section class="max-w-5xl mx-auto px-4 py-10">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-md">
+          <span class="text-xl">🔰</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-800">Beginner Guides</h2>
+          <p class="text-sm text-gray-500">Start here if you're new</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {beginnerPosts.map((post) => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            slug={`en/${post.id}`}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Other Articles -->
+  {otherPosts.length > 0 && (
+    <section class="max-w-5xl mx-auto px-4 py-10">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md">
+          <span class="text-xl">📚</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-800">More Articles</h2>
+          <p class="text-sm text-gray-500">Reviews, comparisons & advanced tips</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {otherPosts.map((post) => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            slug={`en/${post.id}`}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Back Navigation -->
+  <section class="max-w-5xl mx-auto px-4 py-8 flex gap-4">
+    <a href="/en/beginner" class="inline-flex items-center gap-2 text-green-600 hover:text-green-800 font-semibold text-sm transition-colors">
+      <span>🔰</span> Beginner's Guide
+    </a>
+    <a href="/en" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold text-sm transition-colors group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      Back to All Articles
+    </a>
+  </section>
+</BaseLayout>

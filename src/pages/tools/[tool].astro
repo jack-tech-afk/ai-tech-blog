@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const toolDefinitions = [
+  { id: 'chatgpt', label: 'ChatGPT', icon: '💬', gradient: 'from-green-600 via-emerald-600 to-teal-700', tags: ['ChatGPT', 'ChatGPT Plus'], description: 'OpenAIが開発した世界で最も使われているAIチャットボット。文章作成、翻訳、プログラミング支援など幅広い用途に対応。' },
+  { id: 'claude', label: 'Claude', icon: '🟠', gradient: 'from-orange-500 via-amber-600 to-orange-700', tags: ['Claude', 'Anthropic', 'Claude Code'], description: 'Anthropicが開発したAIアシスタント。長文理解、丁寧な文章作成、安全性を重視した設計が特徴。' },
+  { id: 'gemini', label: 'Google Gemini', icon: '✨', gradient: 'from-blue-500 via-indigo-600 to-blue-700', tags: ['Gemini', 'Google'], description: 'Googleが開発したマルチモーダルAI。Gmail、Docs、Sheetsなどとのシームレスな連携が強み。' },
+  { id: 'copilot', label: 'Microsoft Copilot', icon: '🔷', gradient: 'from-blue-600 via-blue-700 to-indigo-800', tags: ['Microsoft Copilot', 'Copilot'], description: 'MicrosoftのAIアシスタント。Word、Excel、PowerPoint、Teamsなどのoffice製品と統合。' },
+  { id: 'midjourney', label: 'Midjourney', icon: '🎨', gradient: 'from-purple-600 via-violet-600 to-fuchsia-700', tags: ['Midjourney'], description: 'ハイクオリティなAI画像生成ツール。アーティスティックな表現力が特徴で、デザイナーやクリエイターに人気。' },
+  { id: 'dall-e', label: 'DALL-E', icon: '🖼️', gradient: 'from-teal-500 via-cyan-600 to-blue-600', tags: ['DALL-E'], description: 'OpenAIの画像生成AI。ChatGPTから直接利用でき、手軽にイメージ画像を作成できる。' },
+  { id: 'perplexity', label: 'Perplexity AI', icon: '🔍', gradient: 'from-sky-500 via-blue-600 to-indigo-600', tags: ['Perplexity', 'AI検索'], description: 'AI搭載の次世代検索エンジン。情報源を明示しながら回答を生成し、リサーチに最適。' },
+  { id: 'cursor', label: 'Cursor', icon: '⌨️', gradient: 'from-gray-700 via-gray-800 to-gray-900', tags: ['Cursor', 'AIプログラミング'], description: 'AI搭載のコードエディタ。VS Codeベースで、AIによるコード補完・生成・リファクタリングが可能。' },
+];
+
+export function getStaticPaths() {
+  const tools = ['chatgpt', 'claude', 'gemini', 'copilot', 'midjourney', 'dall-e', 'perplexity', 'cursor'];
+  return tools.map((tool) => ({ params: { tool } }));
+}
+
+const { tool } = Astro.params;
+const toolDef = toolDefinitions.find((t) => t.id === tool)!;
+
+const allPosts = await getCollection('blog');
+const toolPosts = allPosts
+  .filter((post) => toolDef.tags.some((tag) => post.data.tags?.includes(tag)))
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+const beginnerPosts = toolPosts.filter((p) => p.data.tags?.includes('初心者'));
+const otherPosts = toolPosts.filter((p) => !p.data.tags?.includes('初心者'));
+---
+
+<BaseLayout
+  title={`${toolDef.label}の使い方・レビュー記事一覧｜AI Tech Review`}
+  description={`${toolDef.label}に関する記事一覧。初心者向けガイド、使い方、比較レビューなどを掲載。`}
+>
+  <!-- Hero -->
+  <section class={`relative bg-gradient-to-br ${toolDef.gradient} text-white py-16 overflow-hidden`}>
+    <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+      <span class="text-5xl mb-4 block">{toolDef.icon}</span>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        {toolDef.label}
+      </h1>
+      <p class="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+        {toolDef.description}
+      </p>
+      <div class="mt-4 inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-sm font-medium px-4 py-2 rounded-full">
+        {toolPosts.length} 記事
+      </div>
+    </div>
+  </section>
+
+  <!-- Beginner Articles -->
+  {beginnerPosts.length > 0 && (
+    <section class="max-w-5xl mx-auto px-4 py-10">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-md">
+          <span class="text-xl">🔰</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-800">初心者向けガイド</h2>
+          <p class="text-sm text-gray-500">はじめての方はこちらから</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {beginnerPosts.map((post) => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            slug={post.id}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Other Articles -->
+  {otherPosts.length > 0 && (
+    <section class="max-w-5xl mx-auto px-4 py-10">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md">
+          <span class="text-xl">📚</span>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold text-gray-800">その他の記事</h2>
+          <p class="text-sm text-gray-500">レビュー・比較・活用テクニック</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {otherPosts.map((post) => (
+          <ArticleCard
+            title={post.data.title}
+            description={post.data.description}
+            pubDate={post.data.pubDate}
+            category={post.data.category}
+            slug={post.id}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Back Navigation -->
+  <section class="max-w-5xl mx-auto px-4 py-8 flex gap-4">
+    <a href="/beginner" class="inline-flex items-center gap-2 text-green-600 hover:text-green-800 font-semibold text-sm transition-colors group">
+      <span>🔰</span> 初心者ガイドに戻る
+    </a>
+    <a href="/" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold text-sm transition-colors group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      記事一覧に戻る
+    </a>
+  </section>
+</BaseLayout>
