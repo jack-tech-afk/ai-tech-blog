@@ -6,7 +6,7 @@ const articleSchema = z.object({
     description: z.string(),
     pubDate: z.string(),
     updatedDate: z.string().optional(),
-    category: z.enum(['ai-tools', 'saas', 'gadgets', 'guides', 'ranking']),
+    category: z.enum(['ai-tools', 'saas', 'gadgets', 'guides', 'ranking', 'business']),
     tags: z.array(z.string()).default([]),
     heroImage: z.string().optional(),
     affiliate: z.array(z.object({
