@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const sceneDefinitions = [
+  { id: 'presentation', label: '資料作成', icon: '📊', gradient: 'from-blue-600 via-indigo-600 to-purple-700', tags: ['プレゼン', 'AI資料作成', 'Gamma', 'Canva', 'Beautiful.ai', 'Tome', 'presentation'], description: 'AIで資料作成・プレゼン準備を効率化。Gamma、Canva AI、Copilotなどのツール活用法を紹介。' },
+  { id: 'meeting', label: '議事録・会議', icon: '📝', gradient: 'from-emerald-600 via-green-600 to-teal-700', tags: ['議事録', '会議', 'Otter', 'Notta', 'tl;dv', 'Zoom', 'アジェンダ', 'meeting'], description: 'AI議事録ツール、会議要約、アジェンダ自動作成など、会議の生産性を上げる方法を解説。' },
+  { id: 'email', label: 'メール効率化', icon: '✉️', gradient: 'from-amber-500 via-orange-500 to-red-600', tags: ['メール作成', 'ビジネスメール', 'Gmail', 'Outlook', 'メールテンプレート', 'email'], description: 'AIでビジネスメールを素早く作成。Gmail AI、Outlook Copilot、テンプレート活用術を紹介。' },
+  { id: 'idea', label: 'アイデア整理', icon: '💡', gradient: 'from-yellow-500 via-amber-500 to-orange-600', tags: ['ブレインストーミング', 'アイデア', 'マインドマップ', 'Miro', 'brainstorming'], description: 'AIブレインストーミング、マインドマップ作成、企画のアイデア出しを加速するテクニック。' },
+  { id: 'data', label: 'データ分析', icon: '📈', gradient: 'from-cyan-600 via-blue-600 to-indigo-700', tags: ['Excel', 'データ分析', 'Google Sheets', 'ダッシュボード', 'データ可視化', 'チャート', 'data'], description: 'Excel Copilot、Google Sheets AI、ダッシュボード作成など、データ分析をAIで効率化。' },
+  { id: 'report', label: '日報・レポート', icon: '📋', gradient: 'from-slate-600 via-gray-600 to-zinc-700', tags: ['日報', '週報', 'レポート', '報告書', 'report'], description: 'AIで日報・週報・月次レポートを自動生成。テンプレートとプロンプト例を紹介。' },
+  { id: 'support', label: 'カスタマー対応', icon: '🎧', gradient: 'from-pink-500 via-rose-500 to-red-600', tags: ['カスタマーサポート', 'チャットボット', 'CS', 'support'], description: 'AIチャットボット、自動応答、チケット管理など、カスタマーサポートの自動化手法を解説。' },
+  { id: 'collaboration', label: 'チャット・コラボ', icon: '💬', gradient: 'from-violet-600 via-purple-600 to-fuchsia-700', tags: ['Slack', 'Teams', 'Notion', 'コラボレーション', 'チャット', 'collaboration'], description: 'Slack AI、Teams Copilot、Notion AIなど、チームコラボレーションツールのAI活用法。' },
+  { id: 'writing', label: 'SEO・ライティング', icon: '✍️', gradient: 'from-green-600 via-emerald-600 to-teal-700', tags: ['SEO', 'コピーライティング', 'ライティング', '契約書', 'ドキュメントレビュー', 'writing'], description: 'AIでSEO記事作成、コピーライティング、文書レビューを効率化する方法を紹介。' },
+  { id: 'remote', label: 'リモートワーク', icon: '🏠', gradient: 'from-sky-500 via-blue-600 to-indigo-700', tags: ['リモートワーク', 'テレワーク', 'remote'], description: 'リモートワークを支えるAIツール。オンライン会議、非同期コミュニケーション、タスク管理の効率化。' },
+];
+
+export function getStaticPaths() {
+  return ['presentation', 'meeting', 'email', 'idea', 'data', 'report', 'support', 'collaboration', 'writing', 'remote'].map((scene) => ({ params: { scene } }));
+}
+
+const { scene } = Astro.params;
+const sceneDef = sceneDefinitions.find((s) => s.id === scene)!;
+
+const allPosts = await getCollection('blog');
+const scenePosts = allPosts
+  .filter((post) => post.data.category === 'business' && sceneDef.tags.some((tag) => post.data.tags?.some((t: string) => t.includes(tag))))
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+// Also get general business posts if scene-specific ones are few
+const allBusinessPosts = allPosts
+  .filter((post) => post.data.category === 'business')
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+const displayPosts = scenePosts.length >= 3 ? scenePosts : allBusinessPosts;
+const isShowingAll = scenePosts.length < 3;
+---
+
+<BaseLayout
+  title={`${sceneDef.label}のAI活用術｜ビジネスシーン別ガイド｜AI Tech Review`}
+  description={sceneDef.description}
+>
+  <!-- Hero -->
+  <section class={`relative bg-gradient-to-br ${sceneDef.gradient} text-white py-16 overflow-hidden`}>
+    <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+      <span class="text-5xl mb-4 block">{sceneDef.icon}</span>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        {sceneDef.label}
+      </h1>
+      <p class="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+        {sceneDef.description}
+      </p>
+      <div class="mt-4 inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-sm font-medium px-4 py-2 rounded-full">
+        {scenePosts.length} 記事
+      </div>
+    </div>
+  </section>
+
+  <!-- Scene Navigation -->
+  <section class="max-w-5xl mx-auto px-4 py-6">
+    <div class="flex flex-wrap gap-2">
+      {sceneDefinitions.map((s) => (
+        <a
+          href={`/business/${s.id}`}
+          class={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-sm font-medium transition-all ${
+            s.id === scene
+              ? 'bg-slate-800 border-slate-800 text-white'
+              : 'bg-slate-50 border-slate-200 text-slate-600 hover:border-slate-500 hover:bg-slate-100'
+          }`}
+        >
+          <span>{s.icon}</span>
+          {s.label}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Articles -->
+  <section class="max-w-5xl mx-auto px-4 py-8">
+    {isShowingAll && (
+      <p class="text-sm text-gray-500 mb-6">このシーンの記事が少ないため、ビジネスカテゴリの全記事を表示しています。</p>
+    )}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {displayPosts.map((post) => (
+        <ArticleCard
+          title={post.data.title}
+          description={post.data.description}
+          pubDate={post.data.pubDate}
+          category={post.data.category}
+          slug={post.id}
+          tags={post.data.tags}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Back Navigation -->
+  <section class="max-w-5xl mx-auto px-4 py-8">
+    <a href="/" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold text-sm transition-colors group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      記事一覧に戻る
+    </a>
+  </section>
+</BaseLayout>
