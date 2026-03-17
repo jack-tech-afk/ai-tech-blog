@@ -8,113 +8,51 @@ const beginnerPosts = allPosts
   .filter((post) => post.data.tags?.includes('初心者'))
   .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
 
-// Tool groups for navigation
 const toolGroups = [
-  { id: 'chatgpt', label: 'ChatGPT', icon: '💬', tags: ['ChatGPT'] },
-  { id: 'claude', label: 'Claude', icon: '🟠', tags: ['Claude', 'Claude Code'] },
-  { id: 'gemini', label: 'Gemini', icon: '✨', tags: ['Gemini'] },
-  { id: 'copilot', label: 'Copilot', icon: '🔷', tags: ['Microsoft Copilot'] },
-  { id: 'midjourney', label: 'Midjourney', icon: '🎨', tags: ['Midjourney'] },
-  { id: 'dall-e', label: 'DALL-E', icon: '🖼️', tags: ['DALL-E'] },
-  { id: 'perplexity', label: 'Perplexity', icon: '🔍', tags: ['Perplexity'] },
-  { id: 'cursor', label: 'Cursor', icon: '⌨️', tags: ['Cursor'] },
-];
-
-// Genre groups
-const genreGroups = [
-  { id: 'ai-chat', label: 'AIチャットボット', icon: '💬', tags: ['AIチャットボット', 'ChatGPT', 'Claude', 'Gemini'] },
-  { id: 'ai-image', label: 'AI画像生成', icon: '🎨', tags: ['AI画像生成', 'Midjourney', 'DALL-E'] },
-  { id: 'ai-coding', label: 'AIプログラミング', icon: '💻', tags: ['AIプログラミング', 'Cursor', 'Claude Code'] },
-  { id: 'ai-writing', label: 'AI文章作成', icon: '✍️', tags: ['AI文章作成', 'ライティング'] },
-  { id: 'ai-business', label: 'ビジネス活用', icon: '💼', tags: ['ビジネス活用', 'ビジネス', '仕事効率化'] },
-  { id: 'ai-automation', label: 'AI自動化', icon: '⚡', tags: ['AI自動化', 'Zapier', 'Make'] },
+  { id: 'chatgpt', label: 'ChatGPT', icon: '💬' },
+  { id: 'claude', label: 'Claude', icon: '🟠' },
+  { id: 'gemini', label: 'Gemini', icon: '✨' },
+  { id: 'copilot', label: 'Copilot', icon: '🔷' },
+  { id: 'midjourney', label: 'Midjourney', icon: '🎨' },
+  { id: 'dall-e', label: 'DALL-E', icon: '🖼️' },
+  { id: 'perplexity', label: 'Perplexity', icon: '🔍' },
+  { id: 'cursor', label: 'Cursor', icon: '⌨️' },
 ];
 ---
 
 <BaseLayout
-  title="AI初心者ガイド｜はじめてのAIツール活用完全マップ"
-  description="AI初心者向けの完全ガイド。ChatGPT、Claude、Gemini、Midjourney等の使い方を基礎からわかりやすく解説。ツール別・ジャンル別に記事を探せます。"
+  title="AI初心者ガイド｜はじめてのAIツール活用マップ"
+  description="AI初心者向けガイド。ChatGPT、Claude、Gemini、Midjourney等の使い方を基礎からわかりやすく解説。"
 >
-  <!-- Hero -->
-  <section class="relative bg-gradient-to-br from-green-600 via-emerald-600 to-teal-700 text-white py-16 overflow-hidden">
-    <div class="absolute inset-0 opacity-10" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;)"></div>
-    <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
-      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-sm font-medium px-4 py-2 rounded-full mb-6">
-        <span class="text-lg">🔰</span>
-        初心者向け {beginnerPosts.length} 記事
-      </div>
-      <h1 class="text-3xl md:text-5xl font-bold mb-5 leading-tight">
-        AI初心者ガイド
-        <br class="sm:hidden" />
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-200 to-emerald-200">完全マップ</span>
+  <!-- Compact Hero -->
+  <section class="bg-gradient-to-br from-green-600 to-teal-700 text-white py-10">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">
+        🔰 AI初心者ガイド
       </h1>
-      <p class="text-lg text-green-100/90 max-w-2xl mx-auto leading-relaxed">
-        はじめてAIを使う方へ。ツール別・ジャンル別に、基礎から実践まで<br class="hidden md:block" />
-        わかりやすくガイドします。
+      <p class="text-sm text-green-100/90">
+        はじめてAIを使う方へ。{beginnerPosts.length}本の入門記事をツール別に探せます。
       </p>
     </div>
   </section>
 
-  <!-- Tool Navigation -->
-  <section class="max-w-5xl mx-auto px-4 py-10">
-    <div class="flex items-center gap-3 mb-6">
-      <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-md">
-        <span class="text-xl">🛠️</span>
-      </div>
-      <div>
-        <h2 class="text-2xl font-bold text-gray-800">AIツール別に探す</h2>
-        <p class="text-sm text-gray-500">気になるツールをクリック</p>
-      </div>
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+  <!-- Tool Navigation (compact) -->
+  <section class="max-w-5xl mx-auto px-4 py-6">
+    <h2 class="text-lg font-bold text-gray-800 mb-3">ツール別に探す</h2>
+    <div class="flex flex-wrap gap-2">
       {toolGroups.map((tool) => (
-        <a href={`/tools/${tool.id}`} class="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 group">
-          <span class="text-2xl">{tool.icon}</span>
-          <span class="font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">{tool.label}</span>
+        <a href={`/tools/${tool.id}`} class="inline-flex items-center gap-1.5 px-3 py-2 bg-white rounded-lg border border-gray-200 hover:border-blue-400 hover:shadow-sm transition-all text-sm font-medium text-gray-700 hover:text-blue-600">
+          <span>{tool.icon}</span>
+          {tool.label}
         </a>
       ))}
     </div>
   </section>
 
-  <!-- Genre Navigation -->
+  <!-- Articles Grid -->
   <section class="max-w-5xl mx-auto px-4 py-6">
-    <div class="flex items-center gap-3 mb-6">
-      <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-fuchsia-600 rounded-xl flex items-center justify-center shadow-md">
-        <span class="text-xl">📂</span>
-      </div>
-      <div>
-        <h2 class="text-2xl font-bold text-gray-800">ジャンル別に探す</h2>
-        <p class="text-sm text-gray-500">やりたいことから記事を探す</p>
-      </div>
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-      {genreGroups.map((genre) => {
-        const count = beginnerPosts.filter((p) => genre.tags.some((t) => p.data.tags?.includes(t))).length;
-        return (
-          <a href={`#${genre.id}`} class="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-purple-400 hover:shadow-md transition-all duration-200 group">
-            <span class="text-2xl">{genre.icon}</span>
-            <div>
-              <span class="font-semibold text-gray-700 group-hover:text-purple-600 transition-colors">{genre.label}</span>
-              <span class="block text-xs text-gray-400">{count} 記事</span>
-            </div>
-          </a>
-        );
-      })}
-    </div>
-  </section>
-
-  <!-- All Beginner Articles -->
-  <section class="max-w-5xl mx-auto px-4 py-10">
-    <div class="flex items-center gap-3 mb-8">
-      <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-md">
-        <span class="text-xl">🔰</span>
-      </div>
-      <div>
-        <h2 class="text-2xl font-bold text-gray-800">初心者向け記事一覧</h2>
-        <p class="text-sm text-gray-500">すべての入門記事</p>
-      </div>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <h2 class="text-lg font-bold text-gray-800 mb-4">入門記事一覧</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {beginnerPosts.map((post) => (
         <ArticleCard
           title={post.data.title}
@@ -128,37 +66,8 @@ const genreGroups = [
     </div>
   </section>
 
-  <!-- Genre Sections -->
-  {genreGroups.map((genre) => {
-    const genrePosts = beginnerPosts.filter((p) => genre.tags.some((t) => p.data.tags?.includes(t)));
-    if (genrePosts.length === 0) return null;
-    return (
-      <section id={genre.id} class="max-w-5xl mx-auto px-4 py-10">
-        <div class="flex items-center gap-3 mb-8">
-          <span class="text-2xl">{genre.icon}</span>
-          <div>
-            <h2 class="text-2xl font-bold text-gray-800">{genre.label}</h2>
-            <p class="text-sm text-gray-500">{genrePosts.length} 記事</p>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {genrePosts.map((post) => (
-            <ArticleCard
-              title={post.data.title}
-              description={post.data.description}
-              pubDate={post.data.pubDate}
-              category={post.data.category}
-              slug={post.id}
-              tags={post.data.tags}
-            />
-          ))}
-        </div>
-      </section>
-    );
-  })}
-
   <!-- Back -->
-  <section class="max-w-5xl mx-auto px-4 py-8">
+  <section class="max-w-5xl mx-auto px-4 py-6">
     <a href="/" class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold text-sm transition-colors group">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="19" y1="12" x2="5" y2="12"></line>
