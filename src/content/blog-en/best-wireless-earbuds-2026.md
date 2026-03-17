@@ -7,15 +7,15 @@ heroImage: "/images/heroes/wireless-earbuds.png"
 tags: ["Wireless Earbuds", "Gadgets", "Recommendations", "2026"]
 affiliate:
   - name: "AirPods Pro 3"
-    url: "https://www.amazon.co.jp/s?k=AirPods+Pro+3&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=AirPods+Pro+3&tag=aitechreview2-20"
     price: "¥39,800"
     rating: 4.7
   - name: "Sony WF-1000XM6"
-    url: "https://www.amazon.co.jp/s?k=Sony+WF-1000XM6&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Sony+WF-1000XM6&tag=aitechreview2-20"
     price: "¥36,300"
     rating: 4.8
   - name: "Galaxy Buds3 Pro"
-    url: "https://www.amazon.co.jp/s?k=Galaxy+Buds3+Pro&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Galaxy+Buds3+Pro&tag=aitechreview2-20"
     price: "¥29,800"
     rating: 4.5
 ---
@@ -81,7 +81,7 @@ Wireless earbuds range from under $25 to over $350. That said, **the $70–$140 
 
 ### #1: Sony WF-1000XM6 — The Undisputed Champion
 
-**Price: ¥36,300** | [View on Amazon](https://www.amazon.co.jp/s?k=Sony+WF-1000XM6&tag=mamanomikata2-22)
+**Price: ¥36,300** | [View on Amazon](https://www.amazon.com/s?k=Sony+WF-1000XM6&tag=aitechreview2-20)
 
 Sony's flagship "WF-1000XM6" features the new Integrated Processor V3, delivering **industry-leading noise canceling performance** with a massive leap from the previous generation.
 
@@ -103,7 +103,7 @@ This model excels across ANC, sound quality, and features — **if you can only 
 
 ### #2: AirPods Pro 3 — Unmatched Apple Ecosystem Integration
 
-**Price: ¥39,800** | [View on Amazon](https://www.amazon.co.jp/s?k=AirPods+Pro+3&tag=mamanomikata2-22)
+**Price: ¥39,800** | [View on Amazon](https://www.amazon.com/s?k=AirPods+Pro+3&tag=aitechreview2-20)
 
 For iPhone, Mac, and iPad users, **AirPods Pro 3 is the most seamless choice**. The H3 chip enables effortless automatic device switching, personalized spatial audio, and further improved ANC.
 
@@ -125,7 +125,7 @@ For Apple users, the ecosystem coherence and seamless experience make these **tr
 
 ### #3: Galaxy Buds3 Pro — Flagship Performance at a Mid-Range Price
 
-**Price: ¥29,800** | [View on Amazon](https://www.amazon.co.jp/s?k=Galaxy+Buds3+Pro&tag=mamanomikata2-22)
+**Price: ¥29,800** | [View on Amazon](https://www.amazon.com/s?k=Galaxy+Buds3+Pro&tag=aitechreview2-20)
 
 Samsung's Galaxy Buds3 Pro delivers **flagship-level performance at under ¥30,000**. With SSC HiFi codec support, Galaxy devices can enjoy 24bit/96kHz hi-res playback.
 
@@ -234,7 +234,7 @@ The 2026 wireless earbuds market offers **excellent options at every price point
 
 Choose the model that fits your use case and budget, and you'll elevate your daily listening experience. Check the links below for more details.
 
-[Sony WF-1000XM6 on Amazon](https://www.amazon.co.jp/s?k=Sony+WF-1000XM6&tag=mamanomikata2-22) | [AirPods Pro 3 on Amazon](https://www.amazon.co.jp/s?k=AirPods+Pro+3&tag=mamanomikata2-22) | [Galaxy Buds3 Pro on Amazon](https://www.amazon.co.jp/s?k=Galaxy+Buds3+Pro&tag=mamanomikata2-22)
+[Sony WF-1000XM6 on Amazon](https://www.amazon.com/s?k=Sony+WF-1000XM6&tag=aitechreview2-20) | [AirPods Pro 3 on Amazon](https://www.amazon.com/s?k=AirPods+Pro+3&tag=aitechreview2-20) | [Galaxy Buds3 Pro on Amazon](https://www.amazon.com/s?k=Galaxy+Buds3+Pro&tag=aitechreview2-20)
 
 ## Related Articles
 

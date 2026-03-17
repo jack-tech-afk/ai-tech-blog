@@ -7,11 +7,11 @@ heroImage: "/images/heroes/keyboard-recommendation.png"
 tags: ["Keyboard", "Mechanical", "Remote Work", "Gadgets"]
 affiliate:
   - name: "HHKB Professional HYBRID Type-S"
-    url: "https://www.amazon.co.jp/s?k=HHKB+Professional+HYBRID+Type-S&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=HHKB+Professional+HYBRID+Type-S&tag=aitechreview2-20"
     price: "¥36,850"
     rating: 4.8
   - name: "Keychron Q1 Pro"
-    url: "https://www.amazon.co.jp/s?k=Keychron+Q1+Pro&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Keychron+Q1+Pro&tag=aitechreview2-20"
     price: "¥29,700"
     rating: 4.5
 ---
@@ -85,7 +85,7 @@ The **switch (or "axis")** is the heart of a mechanical keyboard. The three main
 
 **"The ultimate typing experience. A keyboard for life."**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=HHKB+Professional+HYBRID+Type-S&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=HHKB+Professional+HYBRID+Type-S&tag=aitechreview2-20)
 
 **Price: ¥36,850** | Layout: 60% | Switch: Topre (Electrostatic Capacitive) | Connection: Bluetooth/USB-C
 
@@ -111,7 +111,7 @@ The Happy Hacking Keyboard commands a devoted following among programmers and wr
 
 **"Premium aluminum build with extensive customization"**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Keychron+Q1+Pro&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Keychron+Q1+Pro&tag=aitechreview2-20)
 
 **Price: ¥29,700** | Layout: 75% | Switch: Gateron Jupiter (selectable) | Connection: Bluetooth/USB-C
 
@@ -136,7 +136,7 @@ Keychron's high-end Q-series flagship. The **full CNC-machined aluminum case** d
 
 **"The business standard. Rock-solid Logi Bolt connection."**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Logicool+MX+Mechanical+Mini&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Logicool+MX+Mechanical+Mini&tag=aitechreview2-20)
 
 **Price: ¥18,700** | Layout: 75% | Switch: Brown/Red equivalent | Connection: Bluetooth/Logi Bolt
 
@@ -161,7 +161,7 @@ Logitech's business-grade MX series in mechanical form. **Easy-Switch** instantl
 
 **"Ultra-thin mechanical. Laptop-like slim profile with real mechanical feel."**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=NuPhy+Air75+V2&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=NuPhy+Air75+V2&tag=aitechreview2-20)
 
 **Price: ¥16,500** | Layout: 75% | Switch: Gateron Low-Profile (selectable) | Connection: Bluetooth/2.4GHz/USB-C
 
@@ -188,7 +188,7 @@ NuPhy's Air75 V2 is the **definitive low-profile mechanical keyboard**. Despite 
 
 **"Topre's electrostatic capacitive masterpiece. A programmer's best friend."**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Realforce+R3&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Realforce+R3&tag=aitechreview2-20)
 
 **Price: ¥33,880** | Layout: Tenkeyless | Switch: Topre (Electrostatic Capacitive) | Connection: Bluetooth/USB
 
@@ -213,7 +213,7 @@ Made by Japan's Topre Corporation, this premium keyboard features electrostatic 
 
 **"The tenkeyless all-rounder. Outstanding value and quality."**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Keychron+K8+Pro&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Keychron+K8+Pro&tag=aitechreview2-20)
 
 **Price: ¥15,800** | Layout: Tenkeyless | Switch: Gateron G Pro (selectable) | Connection: Bluetooth/USB-C
 
@@ -238,7 +238,7 @@ The Keychron K8 Pro maintains arrow keys and function row in a **tenkeyless layo
 
 **"The pinnacle of ergonomic design. Dramatically reduces wrist strain."**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Kinesis+Advantage360&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Kinesis+Advantage360&tag=aitechreview2-20)
 
 **Price: ¥52,800** | Layout: Split | Switch: Cherry MX (selectable) | Connection: Bluetooth/USB-C
 
@@ -264,7 +264,7 @@ The Kinesis Advantage360 is a **split ergonomic keyboard** with a concave key la
 
 **"Trusted Japanese craftsmanship. Solid build, reliable quality."**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=FILCO+Majestouch+3&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=FILCO+Majestouch+3&tag=aitechreview2-20)
 
 **Price: ¥14,800** | Layout: Tenkeyless/Full-size | Switch: Cherry MX (selectable) | Connection: USB-C
 
@@ -291,7 +291,7 @@ Diatec's FILCO brand delivers a **classic Japanese-made mechanical keyboard**. N
 
 **"Optical switches for the fastest response time in the industry"**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Razer+Huntsman+V3+Pro&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Razer+Huntsman+V3+Pro&tag=aitechreview2-20)
 
 **Price: ¥32,980** | Layout: Tenkeyless/Full-size | Switch: Razer 3rd-Gen Analog Optical | Connection: USB-C
 
@@ -316,7 +316,7 @@ The Razer Huntsman V3 Pro uses **optical switches** — no physical contact poin
 
 **"Rapid Trigger pioneers. The competitive gamer's weapon of choice."**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Wooting+80HE&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Wooting+80HE&tag=aitechreview2-20)
 
 **Price: ¥27,500** | Layout: 75% | Switch: Gateron Lekker (Hall Effect) | Connection: USB-C
 
@@ -341,7 +341,7 @@ Wooting pioneered **Rapid Trigger** technology. Hall effect magnetic switches de
 
 **"The magnetic switch pioneer. A gaming mainstay."**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=SteelSeries+Apex+Pro+TKL&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=SteelSeries+Apex+Pro+TKL&tag=aitechreview2-20)
 
 **Price: ¥28,800** | Layout: Tenkeyless | Switch: OmniPoint 3.0 (Hall Effect) | Connection: USB-C
 
@@ -366,7 +366,7 @@ SteelSeries' flagship gaming keyboard. **OmniPoint switches** with per-key actua
 
 **"Born from pro gamer feedback. Tournament-ready."**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Logicool+G+PRO+X+TKL+RAPID&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Logicool+G+PRO+X+TKL+RAPID&tag=aitechreview2-20)
 
 **Price: ¥22,800** | Layout: Tenkeyless | Switch: GX2 Linear (Hall Effect) | Connection: 2.4GHz/Bluetooth/USB-C
 
@@ -449,11 +449,11 @@ A mechanical keyboard can **dramatically improve your daily work and gaming expe
 
 **Final recommendations by use case:**
 
-- **Best for Remote Work** → [HHKB Professional HYBRID Type-S](https://www.amazon.co.jp/s?k=HHKB+Professional+HYBRID+Type-S&tag=mamanomikata2-22) (Ultimate typing feel)
-- **Best for Programming** → [Realforce R3](https://www.amazon.co.jp/s?k=Realforce+R3&tag=mamanomikata2-22) (APC for fatigue reduction)
-- **Best for Gaming** → [Razer Huntsman V3 Pro](https://www.amazon.co.jp/s?k=Razer+Huntsman+V3+Pro&tag=mamanomikata2-22) (Fastest optical switches)
-- **Best Value** → [Keychron K8 Pro](https://www.amazon.co.jp/s?k=Keychron+K8+Pro&tag=mamanomikata2-22) (Quality mechanical at ¥15,800)
-- **Best for Beginners** → [Keychron K8 Pro](https://www.amazon.co.jp/s?k=Keychron+K8+Pro&tag=mamanomikata2-22) (Hot-swap lets you experiment)
+- **Best for Remote Work** → [HHKB Professional HYBRID Type-S](https://www.amazon.com/s?k=HHKB+Professional+HYBRID+Type-S&tag=aitechreview2-20) (Ultimate typing feel)
+- **Best for Programming** → [Realforce R3](https://www.amazon.com/s?k=Realforce+R3&tag=aitechreview2-20) (APC for fatigue reduction)
+- **Best for Gaming** → [Razer Huntsman V3 Pro](https://www.amazon.com/s?k=Razer+Huntsman+V3+Pro&tag=aitechreview2-20) (Fastest optical switches)
+- **Best Value** → [Keychron K8 Pro](https://www.amazon.com/s?k=Keychron+K8+Pro&tag=aitechreview2-20) (Quality mechanical at ¥15,800)
+- **Best for Beginners** → [Keychron K8 Pro](https://www.amazon.com/s?k=Keychron+K8+Pro&tag=aitechreview2-20) (Hot-swap lets you experiment)
 
 Start by identifying your **use case** and **budget**, then find the best match. Once you step into the world of mechanical keyboards, you'll be hooked on the typing experience.
 

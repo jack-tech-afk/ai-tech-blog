@@ -7,15 +7,15 @@ heroImage: "/images/heroes/ai-music-generation.png"
 tags: ["AI Music", "Suno", "Udio", "AIVA", "Music Generation AI"]
 affiliate:
   - name: "Suno"
-    url: "https://www.amazon.co.jp/s?k=Suno&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Suno&tag=aitechreview2-20"
     price: "Free - $10/month"
     rating: 4.7
   - name: "Udio"
-    url: "https://www.amazon.co.jp/s?k=Udio&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Udio&tag=aitechreview2-20"
     price: "Free - $10/month"
     rating: 4.5
   - name: "AIVA"
-    url: "https://www.amazon.co.jp/s?k=AIVA&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=AIVA&tag=aitechreview2-20"
     price: "Free - 11 EUR/month"
     rating: 4.4
 comparisonTable:
@@ -60,7 +60,7 @@ ctaBox:
   priceNote: "(approx. $10)"
   benefits: ["Generates songs with vocals in multiple languages", "Create full tracks from text in seconds", "Supports pop, rock, jazz & more", "Commercial use allowed (paid plans)"]
   ctaText: "Try Suno for free"
-  ctaUrl: "https://www.amazon.co.jp/s?k=Suno&tag=mamanomikata2-22"
+  ctaUrl: "https://www.amazon.com/s?k=Suno&tag=aitechreview2-20"
   isTopPick: true
 reviewSchema:
   productName: "Suno"
@@ -129,7 +129,7 @@ AI music generation tools are services where artificial intelligence handles com
 
 Suno's greatest strength is the **naturalness of its vocals**. It covers a wide range of genres — pop, rock, jazz, EDM, and even traditional styles — with surprisingly natural vocal delivery in multiple languages.
 
-[Try Suno for free](https://www.amazon.co.jp/s?k=Suno&tag=mamanomikata2-22)
+[Try Suno for free](https://www.amazon.com/s?k=Suno&tag=aitechreview2-20)
 
 ### 2. Udio — For Those Who Demand Premium Audio Quality
 

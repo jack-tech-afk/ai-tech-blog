@@ -13,7 +13,9 @@ interface Props {
 
 const { affiliate = [], category } = Astro.props;
 
-const TAG = "mamanomikata2-22";
+const isEnglish = Astro.url.pathname.startsWith('/en');
+const TAG = isEnglish ? "aitechreview2-20" : "mamanomikata2-22";
+const AMAZON_DOMAIN = isEnglish ? "www.amazon.com" : "www.amazon.co.jp";
 
 // Category-specific product recommendations
 const categoryAds: Record<string, { name: string; search: string; label: string }[]> = {
@@ -72,7 +74,7 @@ const categoryAds: Record<string, { name: string; search: string; label: string 
 const ads = categoryAds[category ?? ""] ?? categoryAds["ai-tools"];
 
 function amazonSearchUrl(search: string) {
-  return `https://www.amazon.co.jp/s?k=${encodeURIComponent(search)}&tag=${TAG}`;
+  return `https://${AMAZON_DOMAIN}/s?k=${encodeURIComponent(search)}&tag=${TAG}`;
 }
 ---
 
@@ -80,7 +82,7 @@ function amazonSearchUrl(search: string) {
   <!-- AD Section -->
   <div class="ad-section">
     <div class="ad-label">AD</div>
-    <div class="ad-title">おすすめアイテム</div>
+    <div class="ad-title">{isEnglish ? 'Recommended Items' : 'おすすめアイテム'}</div>
 
     <div class="ad-items">
       {ads.map((ad) => (
@@ -103,15 +105,15 @@ function amazonSearchUrl(search: string) {
     </div>
 
     <a
-      href={`https://www.amazon.co.jp/gp/bestsellers/computers/&tag=${TAG}`}
+      href={`https://${AMAZON_DOMAIN}/gp/bestsellers/computers/&tag=${TAG}`}
       target="_blank"
       rel="nofollow noopener sponsored"
       class="ad-banner"
     >
       <div class="ad-banner-icon">💻</div>
       <div class="ad-banner-text">
-        <div class="ad-banner-title">Amazon PC周辺機器</div>
-        <div class="ad-banner-sub">売れ筋ランキングを見る →</div>
+        <div class="ad-banner-title">{isEnglish ? 'Amazon PC Peripherals' : 'Amazon PC周辺機器'}</div>
+        <div class="ad-banner-sub">{isEnglish ? 'Check bestsellers →' : '売れ筋ランキングを見る →'}</div>
       </div>
     </a>
   </div>
@@ -120,7 +122,7 @@ function amazonSearchUrl(search: string) {
   {affiliate.length > 0 && (
     <div class="ad-section">
       <div class="ad-label">PR</div>
-      <div class="ad-title">この記事のおすすめ</div>
+      <div class="ad-title">{isEnglish ? 'From This Article' : 'この記事のおすすめ'}</div>
       <div class="ad-items">
         {affiliate.slice(0, 3).map((item) => (
           <a
@@ -143,14 +145,14 @@ function amazonSearchUrl(search: string) {
   <!-- Amazon deals -->
   <div class="ad-section">
     <a
-      href={`https://www.amazon.co.jp/deals?tag=${TAG}`}
+      href={`https://${AMAZON_DOMAIN}/deals?tag=${TAG}`}
       target="_blank"
       rel="nofollow noopener sponsored"
       class="ad-banner amazon-deals"
     >
       <div class="ad-banner-text">
-        <div class="ad-banner-title">Amazon タイムセール</div>
-        <div class="ad-banner-sub">本日のお得な商品をチェック →</div>
+        <div class="ad-banner-title">{isEnglish ? 'Amazon Deals' : 'Amazon タイムセール'}</div>
+        <div class="ad-banner-sub">{isEnglish ? "Check today's deals →" : '本日のお得な商品をチェック →'}</div>
       </div>
     </a>
   </div>

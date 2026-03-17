@@ -7,15 +7,15 @@ heroImage: "/images/heroes/ai-translation-tools.png"
 tags: ["AI Translation", "DeepL", "Google Translate", "ChatGPT", "Translation Tools"]
 affiliate:
   - name: "DeepL Pro"
-    url: "https://www.amazon.co.jp/s?k=DeepL%20Pro&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=DeepL%20Pro&tag=aitechreview2-20"
     price: "From $7.49/month"
     rating: 4.8
   - name: "ChatGPT Plus"
-    url: "https://www.amazon.co.jp/s?k=ChatGPT%20Plus&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=ChatGPT%20Plus&tag=aitechreview2-20"
     price: "$20/month"
     rating: 4.5
   - name: "Mirai Translate"
-    url: "https://www.amazon.co.jp/s?k=%E3%81%BF%E3%82%89%E3%81%84%E7%BF%BB%E8%A8%B3&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=%E3%81%BF%E3%82%89%E3%81%84%E7%BF%BB%E8%A8%B3&tag=aitechreview2-20"
     price: "Contact for pricing"
     rating: 4.4
 comparisonTable:
@@ -60,7 +60,7 @@ ctaBox:
   priceNote: "(Starter plan)"
   benefits: ["Best-in-class natural translation quality", "Full document translation support", "Enterprise-grade security (data deletion guarantee)", "Word, PDF & PPT file support"]
   ctaText: "Try DeepL Pro"
-  ctaUrl: "https://www.amazon.co.jp/s?k=DeepL%20Pro&tag=mamanomikata2-22"
+  ctaUrl: "https://www.amazon.com/s?k=DeepL%20Pro&tag=aitechreview2-20"
   isTopPick: true
 reviewSchema:
   productName: "DeepL Pro"
@@ -128,7 +128,7 @@ Here are the main criteria to consider when selecting an AI translation tool:
 
 DeepL's translations feel remarkably natural — as if written by a human, not a machine. That's its greatest strength.
 
-[Try DeepL Pro](https://www.amazon.co.jp/s?k=DeepL%20Pro&tag=mamanomikata2-22)
+[Try DeepL Pro](https://www.amazon.com/s?k=DeepL%20Pro&tag=aitechreview2-20)
 
 ### 2. Google Translate — Unmatched Language Coverage
 

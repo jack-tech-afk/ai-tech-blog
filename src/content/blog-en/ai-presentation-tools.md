@@ -7,15 +7,15 @@ heroImage: "/images/heroes/ai-presentation-tools.png"
 tags: ["AI Presentations", "Gamma", "Beautiful.ai", "Tome", "Slide Creation"]
 affiliate:
   - name: "Gamma"
-    url: "https://www.amazon.co.jp/s?k=Gamma&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Gamma&tag=aitechreview2-20"
     price: "Free - $10/month"
     rating: 4.8
   - name: "Beautiful.ai"
-    url: "https://www.amazon.co.jp/s?k=Beautiful.ai&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Beautiful.ai&tag=aitechreview2-20"
     price: "From $12/month"
     rating: 4.5
   - name: "Tome"
-    url: "https://www.amazon.co.jp/s?k=Tome&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Tome&tag=aitechreview2-20"
     price: "Free - $10/month"
     rating: 4.3
 comparisonTable:
@@ -60,7 +60,7 @@ ctaBox:
   priceNote: "(approx. $10)"
   benefits: ["Generate beautiful slides from text alone", "Full multilingual support", "Web publishing & PDF/PPTX export", "Team collaboration features"]
   ctaText: "Try Gamma for free"
-  ctaUrl: "https://www.amazon.co.jp/s?k=Gamma&tag=mamanomikata2-22"
+  ctaUrl: "https://www.amazon.com/s?k=Gamma&tag=aitechreview2-20"
   isTopPick: true
 reviewSchema:
   productName: "Gamma"
@@ -126,7 +126,7 @@ AI presentation tools are services where artificial intelligence automatically o
 
 Gamma's greatest strengths are its **multilingual support accuracy** and **design quality**. It handles everything from business presentations to seminar materials across a wide range of use cases.
 
-[Try Gamma for free](https://www.amazon.co.jp/s?k=Gamma&tag=mamanomikata2-22)
+[Try Gamma for free](https://www.amazon.com/s?k=Gamma&tag=aitechreview2-20)
 
 ### 2. Beautiful.ai — Best for Design Consistency
 

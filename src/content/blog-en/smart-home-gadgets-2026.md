@@ -7,15 +7,15 @@ heroImage: "/images/heroes/smart-home-gadgets-2026.png"
 tags: ["Smart Home", "IoT", "Gadgets", "Smart Speaker", "Robot Vacuum"]
 affiliate:
   - name: "Amazon Echo Show 8 (3rd Gen)"
-    url: "https://www.amazon.co.jp/dp/B0BLS3Y632?tag=mamanomikata2-22"
+    url: "https://www.amazon.com/dp/B0BLS3Y632?tag=aitechreview2-20"
     price: "¥14,980"
     description: "Display-equipped smart speaker with Alexa"
   - name: "SwitchBot Lock Pro"
-    url: "https://www.amazon.co.jp/dp/B0CXDX9J38?tag=mamanomikata2-22"
+    url: "https://www.amazon.com/dp/B0CXDX9J38?tag=aitechreview2-20"
     price: "¥15,980"
     description: "No-installation-required smart lock"
   - name: "Philips Hue Starter Kit"
-    url: "https://www.amazon.co.jp/dp/B09RKCBQ5F?tag=mamanomikata2-22"
+    url: "https://www.amazon.com/dp/B09RKCBQ5F?tag=aitechreview2-20"
     price: "¥9,980"
     description: "Smart LED lighting set with 16 million colors"
 ---
@@ -79,7 +79,7 @@ The **bestselling retrofit smart lock** that requires no installation work. Simp
 
 **Note:** Battery-powered, so you'll need to replace batteries approximately every 6 months. The app displays battery level, so you'll never be caught off guard.
 
-[Check out SwitchBot Lock Pro](https://www.amazon.co.jp/dp/B0CXDX9J38?tag=mamanomikata2-22)
+[Check out SwitchBot Lock Pro](https://www.amazon.com/dp/B0CXDX9J38?tag=aitechreview2-20)
 
 ### Qrio Lock Q-SL2
 

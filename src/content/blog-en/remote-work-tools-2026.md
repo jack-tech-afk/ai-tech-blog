@@ -7,15 +7,15 @@ heroImage: "/images/heroes/remote-work-tools-2026.png"
 tags: ["Remote Work", "Work From Home", "SaaS", "Productivity", "Telecommuting"]
 affiliate:
   - name: "Notion (Team Plan)"
-    url: "https://www.amazon.co.jp/s?k=Notion%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Notion%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=aitechreview2-20"
     price: "From $8/user/month"
     rating: 4.7
   - name: "1Password (Business)"
-    url: "https://www.amazon.co.jp/s?k=1Password%EF%BC%88%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%EF%BC%89&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=1Password%EF%BC%88%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%EF%BC%89&tag=aitechreview2-20"
     price: "$7.99/user/month"
     rating: 4.6
   - name: "NordVPN (Business)"
-    url: "https://www.amazon.co.jp/s?k=NordVPN%EF%BC%88%E6%B3%95%E4%BA%BA%E5%90%91%E3%81%91%EF%BC%89&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=NordVPN%EF%BC%88%E6%B3%95%E4%BA%BA%E5%90%91%E3%81%91%EF%BC%89&tag=aitechreview2-20"
     price: "From $7/user/month"
     rating: 4.5
 comparisonTable:
@@ -60,7 +60,7 @@ ctaBox:
   priceNote: "(billed annually)"
   benefits: ["Centralize documents, wikis, and task management", "AI features streamline writing and content creation", "Knowledge sharing across the entire team", "Extensive template library for instant onboarding"]
   ctaText: "Start Notion for Free"
-  ctaUrl: "https://www.amazon.co.jp/s?k=Notion%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=mamanomikata2-22"
+  ctaUrl: "https://www.amazon.com/s?k=Notion%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=aitechreview2-20"
   isTopPick: true
 reviewSchema:
   productName: "Remote Work Tools (Overall)"
@@ -154,7 +154,7 @@ Whether it's walking someone through a process or providing code review feedback
 
 It serves as the knowledge base for remote teams, centralizing internal wikis, meeting notes, specifications, and manuals. With **Notion AI**, you can generate, summarize, and translate content without leaving the workspace.
 
-[Start Notion for Free](https://www.amazon.co.jp/s?k=Notion%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=mamanomikata2-22)
+[Start Notion for Free](https://www.amazon.com/s?k=Notion%EF%BC%88%E3%83%81%E3%83%BC%E3%83%A0%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=aitechreview2-20)
 
 ### 5. Google Workspace – The Cloud Office Classic
 
@@ -186,7 +186,7 @@ Its real-time collaboration features are best-in-class — having multiple peopl
 
 With shared vaults, your team can securely access login credentials for shared services. It also streamlines onboarding new members and revoking access when someone leaves.
 
-[Try 1Password](https://www.amazon.co.jp/s?k=1Password%EF%BC%88%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%EF%BC%89&tag=mamanomikata2-22)
+[Try 1Password](https://www.amazon.com/s?k=1Password%EF%BC%88%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%EF%BC%89&tag=aitechreview2-20)
 
 ### 9. NordVPN – Secure Remote Access
 
@@ -194,7 +194,7 @@ With shared vaults, your team can securely access login credentials for shared s
 
 Encrypted connections allow you to safely access company systems even over public networks. Business plans let administrators manage VPN usage across the entire team.
 
-[Try NordVPN](https://www.amazon.co.jp/s?k=NordVPN%EF%BC%88%E6%B3%95%E4%BA%BA%E5%90%91%E3%81%91%EF%BC%89&tag=mamanomikata2-22)
+[Try NordVPN](https://www.amazon.com/s?k=NordVPN%EF%BC%88%E6%B3%95%E4%BA%BA%E5%90%91%E3%81%91%EF%BC%89&tag=aitechreview2-20)
 
 ## Productivity Tools
 

@@ -7,11 +7,11 @@ heroImage: "/images/heroes/wireless-earbuds.png"
 tags: ["Wireless Earbuds", "Recommendations", "Ranking", "Gadgets"]
 affiliate:
   - name: "AirPods Pro 3"
-    url: "https://www.amazon.co.jp/s?k=AirPods+Pro+3&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=AirPods+Pro+3&tag=aitechreview2-20"
     price: "¥39,800"
     rating: 4.7
   - name: "Sony WF-1000XM6"
-    url: "https://www.amazon.co.jp/s?k=Sony+WF-1000XM6&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Sony+WF-1000XM6&tag=aitechreview2-20"
     price: "¥36,300"
     rating: 4.8
 ---
@@ -69,7 +69,7 @@ For gym or running use, look for **IPX4 or higher** water resistance. Some model
 
 **"Top-tier across sound quality, noise canceling, and features"**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Sony+WF-1000XM6&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Sony+WF-1000XM6&tag=aitechreview2-20)
 
 Sony's flagship continues to reign supreme in 2026. The new Integrated Processor V3 delivers a **~25% improvement in noise canceling performance** over the previous generation — particularly dominant in the mid-to-low frequency range, offering near-total silence on trains.
 
@@ -86,7 +86,7 @@ Sony's flagship continues to reign supreme in 2026. The new Integrated Processor
 
 **"If you're in the Apple ecosystem, look no further"**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=AirPods+Pro+3&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=AirPods+Pro+3&tag=aitechreview2-20)
 
 Seamless integration with the Apple ecosystem is the ultimate advantage. The H3 chip now enables high-quality playback of Apple Music's lossless audio over Bluetooth.
 
@@ -103,7 +103,7 @@ Seamless integration with the Apple ecosystem is the ultimate advantage. The H3 
 
 **"Bose goes all out with their latest noise canceling masterpiece"**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Bose+QuietComfort+Ultra+Earbuds+2&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Bose+QuietComfort+Ultra+Earbuds+2&tag=aitechreview2-20)
 
 The culmination of Bose's noise canceling expertise. Especially impressive at targeting **human voices** — making these perfect for cafes and open offices.
 
@@ -135,7 +135,7 @@ Panasonic's premium Technics brand delivers wireless earbuds with a commitment t
 
 **"IPX7 water resistance meets high-performance ANC"**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Galaxy+Buds4+Pro&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Galaxy+Buds4+Pro&tag=aitechreview2-20)
 
 The standout feature is **IPX7 water resistance** — no worries about sweat, rain, or accidental drops in water. Galaxy AI integration enables real-time translation during calls.
 
@@ -167,7 +167,7 @@ The latest from legendary audio brand Sennheiser, tuned for **audiophile-grade**
 
 **"A touchscreen display on the charging case — control without your phone"**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=JBL+Tour+Pro+3&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=JBL+Tour+Pro+3&tag=aitechreview2-20)
 
 The standout feature is the **touchscreen display on the charging case**. Adjust volume, switch ANC modes, and check notifications without pulling out your phone.
 
@@ -184,7 +184,7 @@ The standout feature is the **touchscreen display on the charging case**. Adjust
 
 **"Jaw-dropping sound quality under ¥10,000"**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=SOUNDPEATS+Capsule+4&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=SOUNDPEATS+Capsule+4&tag=aitechreview2-20)
 
 At **¥8,980**, LDAC support and ANC in the same package is an incredible value proposition. Battery life of 9 hours standalone is also the longest in our ranking.
 
@@ -201,7 +201,7 @@ At **¥8,980**, LDAC support and ANC in the same package is an incredible value 
 
 **"The complete mid-range package — balanced excellence everywhere"**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=Anker+Soundcore+Liberty+5+Pro&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=Anker+Soundcore+Liberty+5+Pro&tag=aitechreview2-20)
 
 Anker's Soundcore delivers the **best buy in the mid-range**. LDAC, high-performance ANC, and multipoint connection at ¥12,980 — it's essentially a flagship at half the price.
 
@@ -218,7 +218,7 @@ Anker's Soundcore delivers the **best buy in the mid-range**. LDAC, high-perform
 
 **"A solid entry-level option under ¥7,000"**
 
-[View on Amazon](https://www.amazon.co.jp/s?k=EDIFIER+NeoBuds+S+Pro&tag=mamanomikata2-22)
+[View on Amazon](https://www.amazon.com/s?k=EDIFIER+NeoBuds+S+Pro&tag=aitechreview2-20)
 
 At **¥6,980**, this entry-level model packs ANC and IPX4 water resistance. A great first pair or casual backup option.
 
@@ -285,9 +285,9 @@ The 2026 wireless earbuds market sees flagship performance reaching its peak whi
 
 **Can't decide? Choose from these three:**
 
-1. **Best Overall** → [Sony WF-1000XM6](https://www.amazon.co.jp/s?k=Sony+WF-1000XM6&tag=mamanomikata2-22)
-2. **iPhone Users** → [AirPods Pro 3](https://www.amazon.co.jp/s?k=AirPods+Pro+3&tag=mamanomikata2-22)
-3. **Best Value** → [Anker Soundcore Liberty 5 Pro](https://www.amazon.co.jp/s?k=Anker+Soundcore+Liberty+5+Pro&tag=mamanomikata2-22)
+1. **Best Overall** → [Sony WF-1000XM6](https://www.amazon.com/s?k=Sony+WF-1000XM6&tag=aitechreview2-20)
+2. **iPhone Users** → [AirPods Pro 3](https://www.amazon.com/s?k=AirPods+Pro+3&tag=aitechreview2-20)
+3. **Best Value** → [Anker Soundcore Liberty 5 Pro](https://www.amazon.com/s?k=Anker+Soundcore+Liberty+5+Pro&tag=aitechreview2-20)
 
 Find the pair that matches your needs, budget, and lifestyle — and enjoy the wireless audio experience.
 

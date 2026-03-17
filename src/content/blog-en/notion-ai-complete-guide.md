@@ -7,15 +7,15 @@ heroImage: "/images/heroes/notion-ai-complete-guide.png"
 tags: ["Notion AI", "Notion", "Productivity", "AI Tool Tips"]
 affiliate:
   - name: "Notion AI (Plus Plan)"
-    url: "https://www.amazon.co.jp/s?k=Notion%20AI%EF%BC%88%E3%83%97%E3%83%A9%E3%82%B9%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Notion%20AI%EF%BC%88%E3%83%97%E3%83%A9%E3%82%B9%E3%83%97%E3%83%A9%E3%83%B3%EF%BC%89&tag=aitechreview2-20"
     price: "$10/month (AI add-on)"
     rating: 4.6
   - name: "Notion Business Plan"
-    url: "https://www.amazon.co.jp/s?k=Notion%20%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%97%E3%83%A9%E3%83%B3&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Notion%20%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%97%E3%83%A9%E3%83%B3&tag=aitechreview2-20"
     price: "$18/user/month"
     rating: 4.5
   - name: "Notion Personal Plan"
-    url: "https://www.amazon.co.jp/s?k=Notion%20%E5%80%8B%E4%BA%BA%E3%83%97%E3%83%A9%E3%83%B3&tag=mamanomikata2-22"
+    url: "https://www.amazon.com/s?k=Notion%20%E5%80%8B%E4%BA%BA%E3%83%97%E3%83%A9%E3%83%B3&tag=aitechreview2-20"
     price: "Free – $8/month"
     rating: 4.7
 comparisonTable:
@@ -46,7 +46,7 @@ ctaBox:
   priceNote: "(Notion subscription + AI add-on)"
   benefits: ["Automated writing, summarization & translation", "Database auto-fill", "Automatic meeting note organization", "Q&A for knowledge search"]
   ctaText: "Try Notion AI"
-  ctaUrl: "https://www.amazon.co.jp/s?k=Notion%20AI&tag=mamanomikata2-22"
+  ctaUrl: "https://www.amazon.com/s?k=Notion%20AI&tag=aitechreview2-20"
   isTopPick: true
 reviewSchema:
   productName: "Notion AI"
@@ -204,7 +204,7 @@ Translate Japanese documents into English to facilitate smooth information shari
 
 Notion AI can be added to any plan for $10/month. Annual billing offers a discount, making it the better deal for long-term use.
 
-[Try Notion AI](https://www.amazon.co.jp/s?k=Notion%20AI&tag=mamanomikata2-22)
+[Try Notion AI](https://www.amazon.com/s?k=Notion%20AI&tag=aitechreview2-20)
 
 ## Notion AI vs ChatGPT: When to Use Each
 

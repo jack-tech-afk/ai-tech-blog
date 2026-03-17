@@ -7,7 +7,7 @@ heroImage: "/images/heroes/monitor-recommendation-2026.png"
 tags: ["Monitor", "Display", "Remote Work", "Gaming"]
 affiliate:
   - name: "Dell S2722QC 27-inch 4K"
-    url: "https://www.amazon.co.jp/dp/B09MYQJNF9?tag=mamanomikata2-22"
+    url: "https://www.amazon.com/dp/B09MYQJNF9?tag=aitechreview2-20"
     price: "Approx. ¥42,800"
     rating: 4.5
 ---
