@@ -1,5 +1,6 @@
 ---
 title: "Google Sheets × Gemini活用術｜スプレッドシートをAIで効率化"
+heroImage: "/images/heroes/ai-google-sheets.png"
 description: "Google SheetsのGemini機能でデータ整理・関数自動提案・グラフ作成を効率化する方法を解説。無料で使えるAIスプレッドシート活用術を具体例付きで紹介します。"
 pubDate: "2026-03-17"
 category: "business"

@@ -1,5 +1,6 @@
 ---
 title: "DALL-E入門｜ChatGPTで画像を作る方法を初心者向けに完全解説"
+heroImage: "/images/heroes/dall-e-beginner-guide.png"
 description: "DALL-Eの使い方を初心者向けに徹底解説。ChatGPTからの画像生成方法、プロンプトのコツ、生成例、Midjourneyとの違いまで、AI画像生成の始め方が5分でわかります。"
 pubDate: "2026-03-17"
 category: "guides"

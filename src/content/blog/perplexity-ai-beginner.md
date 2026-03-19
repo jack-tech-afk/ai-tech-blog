@@ -1,5 +1,6 @@
 ---
 title: "Perplexity AI入門｜AI検索エンジンの使い方を初心者向けに解説【2026年版】"
+heroImage: "/images/heroes/perplexity-ai-beginner.png"
 description: "Perplexity AIの使い方を初心者向けに徹底解説。従来のGoogle検索との違い、Pro版の機能、情報収集・リサーチでの活用法まで、AI検索エンジンの始め方がわかります。"
 pubDate: "2026-03-17"
 category: "guides"

@@ -1,5 +1,6 @@
 ---
 title: "AIカスタマーサポート自動化入門｜チャットボット導入ガイド"
+heroImage: "/images/heroes/ai-customer-support.png"
 description: "AIチャットボットでカスタマーサポートを自動化する方法を解説。Zendesk AI、Intercom、ChatGPT APIの比較から導入手順、FAQ自動応答の設定まで具体的に紹介します。"
 pubDate: "2026-03-17"
 category: "business"

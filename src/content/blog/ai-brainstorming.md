@@ -1,5 +1,6 @@
 ---
 title: "AIブレインストーミング入門｜ChatGPT・Claudeでアイデアを量産する方法"
+heroImage: "/images/heroes/ai-brainstorming.png"
 description: "ChatGPTやClaudeを使ったAIブレインストーミングの手法5選を紹介。SCAMPER法×AIの活用、実践的なプロンプトテンプレート、企画会議での使い方を解説します。"
 pubDate: "2026-03-17"
 category: "business"

@@ -1,5 +1,6 @@
 ---
 title: "Notion AI ビジネス活用術｜プロジェクト管理・ナレッジベースを自動化"
+heroImage: "/images/heroes/ai-notion-business.png"
 description: "Notion AIのビジネス活用術を徹底解説。プロジェクト管理の自動化、ナレッジベース構築、ドキュメント自動生成、テンプレート活用まで具体的な方法を紹介します。"
 pubDate: "2026-03-17"
 category: "business"

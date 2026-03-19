@@ -1,5 +1,6 @@
 ---
 title: "Google Gemini入門【2026年】無料AIの使い方を徹底解説"
+heroImage: "/images/heroes/gemini-beginner-guide.png"
 description: "Google Geminiの使い方を初心者向けに解説。無料でできること・Gmail連携・ChatGPTとの違いを紹介。"
 pubDate: "2026-03-17"
 category: "guides"

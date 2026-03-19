@@ -1,5 +1,6 @@
 ---
 title: "AIでSNS投稿を量産する方法｜X・Instagram・LinkedIn自動作成術"
+heroImage: "/images/heroes/ai-sns-posting.png"
 description: "AIを使ってX（Twitter）、Instagram、LinkedInの投稿を効率的に作成する方法を解説。プラットフォーム別プロンプト、ハッシュタグ生成、画像生成連携、スケジュール管理まで網羅。"
 pubDate: "2026-03-17"
 category: "business"

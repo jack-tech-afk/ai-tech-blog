@@ -1,5 +1,6 @@
 ---
 title: "AIでグラフ・チャートを自動作成する方法｜ChatGPT・Claude活用術"
+heroImage: "/images/heroes/ai-chart-creation.png"
 description: "ChatGPTのAdvanced Data AnalysisやClaudeのアーティファクト機能でグラフやチャートを自動作成する方法を解説。プロンプト例や使い分けのポイントも紹介します。"
 pubDate: "2026-03-17"
 category: "business"

@@ -1,5 +1,6 @@
 ---
 title: "AIで会議の要約を自動生成する方法｜ChatGPT・Claude・Copilot活用"
+heroImage: "/images/heroes/ai-meeting-summary.png"
 description: "ChatGPT・Claude・Copilotを使って会議の要約を自動生成する方法を解説。録音→文字起こし→要約の3ステップと実践的なプロンプト例を紹介します。"
 pubDate: "2026-03-17"
 category: "business"

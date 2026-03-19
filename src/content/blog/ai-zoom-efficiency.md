@@ -1,5 +1,6 @@
 ---
 title: "Zoom × AI で会議を10倍効率化する方法｜AI Companion活用ガイド"
+heroImage: "/images/heroes/ai-zoom-efficiency.png"
 description: "ZoomのAI Companion機能を使って会議を10倍効率化する方法を解説。要約・質問・アクションアイテム自動抽出の設定方法と活用テクニックを紹介します。"
 pubDate: "2026-03-17"
 category: "business"

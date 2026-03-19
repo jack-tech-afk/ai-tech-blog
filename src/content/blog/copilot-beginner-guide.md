@@ -1,5 +1,6 @@
 ---
 title: "Microsoft Copilot入門｜Word・Excel・PowerPointでAIを使いこなす方法"
+heroImage: "/images/heroes/copilot-beginner-guide.png"
 description: "Microsoft Copilotの使い方を初心者向けに完全解説。Word・Excel・PowerPointでの具体的な活用法、料金プラン、ChatGPTとの違いまで、仕事の生産性を上げるAI活用術がわかります。"
 pubDate: "2026-03-17"
 category: "guides"

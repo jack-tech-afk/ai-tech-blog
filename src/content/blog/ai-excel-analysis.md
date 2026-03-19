@@ -1,5 +1,6 @@
 ---
 title: "AIでExcelデータ分析入門｜Copilot・ChatGPTで数式も関数もいらない"
+heroImage: "/images/heroes/ai-excel-analysis.png"
 description: "Excel Copilotの使い方、ChatGPTでの数式自動生成、ピボットテーブル自動化、グラフ作成まで。AIを使えばExcelの関数知識ゼロでもデータ分析ができる方法を徹底解説します。"
 pubDate: "2026-03-17"
 category: "business"

@@ -1,5 +1,6 @@
 ---
 title: "【初心者向け】Midjourney入門ガイド｜AIで美しい画像を生成する方法"
+heroImage: "/images/heroes/midjourney-beginner-guide.png"
 description: "Midjourneyの使い方を初心者向けに完全解説。料金プラン、Discord・Web版の操作方法、プロンプトの書き方、スタイル指定のコツまで、AI画像生成の始め方がわかります。"
 pubDate: "2026-03-17"
 category: "guides"

@@ -1,5 +1,6 @@
 ---
 title: "AIマインドマップツール比較｜Miro AI・Whimsical・XMind 使い方ガイド"
+heroImage: "/images/heroes/ai-mindmap-tools.png"
 description: "AIマインドマップツールMiro AI・Whimsical・XMindを徹底比較。AI自動生成機能、活用シーン（企画・学習・分析）、料金プランを詳しく解説します。"
 pubDate: "2026-03-17"
 category: "business"

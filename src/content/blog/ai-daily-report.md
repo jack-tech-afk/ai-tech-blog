@@ -1,5 +1,6 @@
 ---
 title: "AIで日報・週報を自動作成する方法｜テンプレート×ChatGPT活用術"
+heroImage: "/images/heroes/ai-daily-report.png"
 description: "ChatGPTを使った日報・週報の自動作成方法を解説。テンプレート、Slack連携、自動化ワークフローまで、報告書作成の時間を90%削減する具体的な手順を紹介します。"
 pubDate: "2026-03-17"
 category: "business"

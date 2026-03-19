@@ -1,5 +1,6 @@
 ---
 title: "AI議事録ツール比較｜Otter・tl;dv・Notta 自動文字起こし完全ガイド"
+heroImage: "/images/heroes/ai-meeting-notes.png"
 description: "AI議事録ツールOtter・tl;dv・Nottaを徹底比較。精度・料金・日本語対応・Zoom/Teams連携まで解説し、あなたに最適なツールの選び方を紹介します。"
 pubDate: "2026-03-17"
 category: "business"
