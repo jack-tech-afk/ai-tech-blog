@@ -15,7 +15,7 @@ affiliate:
     price: "月額3,200円/ユーザー"
     rating: 4.4
   - name: "『Teams仕事術』"
-    url: "https://www.amazon.co.jp/dp/4297126419?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2F4297126419"
     price: "1,848円"
     rating: 4.1
 ctaBox:

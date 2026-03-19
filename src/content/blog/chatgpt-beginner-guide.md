@@ -11,11 +11,11 @@ affiliate:
     price: "月額20ドル"
     description: "GPT-4oをフル活用できる有料プラン。画像生成・高度な分析も可能"
   - name: "ChatGPTの教科書（AI活用入門）"
-    url: "https://www.amazon.co.jp/dp/B0D5YJKL3N?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0D5YJKL3N"
     price: "1,760円"
     description: "ChatGPTの基本から応用まで網羅した初心者必読の一冊"
   - name: "AI時代の仕事術"
-    url: "https://www.amazon.co.jp/dp/B0D8KXWP2R?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0D8KXWP2R"
     price: "1,540円"
     description: "AIを活用して仕事の生産性を劇的に上げる実践的ノウハウ"
 ctaBox:

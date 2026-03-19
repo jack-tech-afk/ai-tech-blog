@@ -17,7 +17,7 @@ affiliate:
     description: "Slack連携の自動化ツール"
     rating: 4.3
   - name: "できるSlack入門"
-    url: "https://www.amazon.co.jp/dp/B07KXKQFCL?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB07KXKQFCL"
     price: "1,628円"
     description: "Slack活用の入門書籍"
     rating: 4.1

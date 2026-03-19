@@ -11,11 +11,11 @@ affiliate:
     price: "月額20ドル"
     description: "Claude最上位モデルへのフルアクセス。長文処理・分析に最適"
   - name: "AIの基礎がわかる本"
-    url: "https://www.amazon.co.jp/dp/B0D5YJKL3N?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0D5YJKL3N"
     price: "1,760円"
     description: "AI初心者のための基礎知識と活用法を網羅した入門書"
   - name: "AI時代の文章術"
-    url: "https://www.amazon.co.jp/dp/B0D8KXWP2R?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0D8KXWP2R"
     price: "1,540円"
     description: "AIと共に書く時代の新しい文章テクニック"
 ctaBox:

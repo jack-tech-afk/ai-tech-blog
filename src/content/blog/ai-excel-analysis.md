@@ -15,7 +15,7 @@ affiliate:
     price: "月額20ドル（約3,000円）"
     rating: 4.4
   - name: "できるExcel 2024 Office 365対応"
-    url: "https://www.amazon.co.jp/dp/B0DGRWQ3VK?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0DGRWQ3VK"
     price: "1,738円"
     rating: 4.2
 ctaBox:

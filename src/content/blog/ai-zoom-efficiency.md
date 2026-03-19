@@ -15,11 +15,11 @@ affiliate:
     price: "月額2,244円/ユーザー"
     rating: 4.4
   - name: "Anker PowerConf C200 Webカメラ"
-    url: "https://www.amazon.co.jp/dp/B0B8J4M8KV?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0B8J4M8KV"
     price: "¥7,990"
     rating: 4.3
   - name: "Jabra Speak2 55 スピーカーフォン"
-    url: "https://www.amazon.co.jp/dp/B0BRXQRPNX?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0BRXQRPNX"
     price: "¥19,360"
     rating: 4.5
 ctaBox:

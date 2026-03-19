@@ -15,7 +15,7 @@ affiliate:
     price: "月額20ドル"
     description: "GPT-4oフルアクセス、画像生成対応の万能プラン"
   - name: "AI活用の教科書"
-    url: "https://www.amazon.co.jp/dp/B0D5YJKL3N?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0D5YJKL3N"
     price: "1,760円"
     description: "主要AIツールの比較と活用法を網羅した一冊"
 comparisonTable:

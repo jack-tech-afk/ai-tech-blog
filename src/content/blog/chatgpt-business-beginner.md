@@ -15,7 +15,7 @@ affiliate:
     price: "月額25ドル/人"
     description: "チーム全体でのAI活用に。管理機能とセキュリティ強化"
   - name: "AI仕事術の教科書"
-    url: "https://www.amazon.co.jp/dp/B0D8KXWP2R?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0D8KXWP2R"
     price: "1,540円"
     description: "ビジネスパーソンのためのAI活用実践ガイド"
 ctaBox:

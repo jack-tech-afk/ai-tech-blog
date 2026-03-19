@@ -19,7 +19,7 @@ affiliate:
     price: "年額5,800円"
     rating: 4.2
   - name: "マインドマップ超入門（書籍）"
-    url: "https://www.amazon.co.jp/dp/4799322060?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2F4799322060"
     price: "¥1,540"
     rating: 4.1
 ctaBox:

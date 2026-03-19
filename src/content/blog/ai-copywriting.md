@@ -11,11 +11,11 @@ affiliate:
     price: "月額20ドル"
     rating: 4.5
   - name: "『セールスコピー大全』"
-    url: "https://www.amazon.co.jp/dp/4827212317?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2F4827212317"
     price: "1,980円"
     rating: 4.4
   - name: "『人を操る禁断の文章術』"
-    url: "https://www.amazon.co.jp/dp/4479795715?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2F4479795715"
     price: "1,540円"
     rating: 4.3
 ctaBox:

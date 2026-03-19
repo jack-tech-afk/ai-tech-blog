@@ -11,11 +11,11 @@ affiliate:
     price: "月額20ドル"
     rating: 4.5
   - name: "Microsoft 365 Personal"
-    url: "https://www.amazon.co.jp/dp/B0CWN4F89Y?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0CWN4F89Y"
     price: "年額14,900円"
     rating: 4.4
   - name: "Googleフォーム活用ガイド"
-    url: "https://www.amazon.co.jp/dp/4295017450?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2F4295017450"
     price: "2,178円"
     rating: 4.0
 ctaBox:

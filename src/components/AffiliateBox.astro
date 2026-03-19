@@ -17,6 +17,12 @@ const {
   buttonText = '公式サイトを見る',
 } = Astro.props;
 
+// もしもアフィリエイト impression tracking
+const isMoshimo = url.includes('af.moshimo.com');
+const moshimoImpressionUrl = isMoshimo
+  ? `https://i.moshimo.com/af/i/impression?a_id=5420076&p_id=170&pc_id=185&pl_id=4062`
+  : null;
+
 const stars = rating ? Math.round(rating * 2) / 2 : null;
 const fullStars = stars ? Math.floor(stars) : 0;
 const hasHalf = stars ? stars % 1 !== 0 : false;
@@ -95,4 +101,7 @@ const emptyStars = stars ? 5 - Math.ceil(stars) : 0;
       </div>
     </div>
   </div>
+  {moshimoImpressionUrl && (
+    <img src={moshimoImpressionUrl} width="1" height="1" style="border:0" alt="" />
+  )}
 </div>

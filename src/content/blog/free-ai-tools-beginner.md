@@ -11,7 +11,7 @@ affiliate:
     price: "月額20ドル"
     description: "無料版の上位プラン。GPT-4o・DALL-E・高度な分析が使い放題"
   - name: "AI活用入門書"
-    url: "https://www.amazon.co.jp/dp/B0DG69BZ1L?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0DG69BZ1L"
     price: "1,760円"
     description: "AIツールの活用法を網羅的に学べる入門書"
   - name: "Notion Plus"

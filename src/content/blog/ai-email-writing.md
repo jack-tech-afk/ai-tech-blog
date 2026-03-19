@@ -11,7 +11,7 @@ affiliate:
     price: "月額20ドル"
     rating: 4.7
   - name: "Microsoft Copilot Pro"
-    url: "https://www.amazon.co.jp/dp/B0D1SDKPV5?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0D1SDKPV5"
     price: "月額3,200円"
     rating: 4.5
   - name: "Jasper AI"

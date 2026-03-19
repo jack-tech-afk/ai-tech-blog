@@ -19,7 +19,7 @@ affiliate:
     price: "月額8ドル/ユーザー"
     rating: 4.3
   - name: "Notionで実現する新しいWikiマネジメント（書籍）"
-    url: "https://www.amazon.co.jp/dp/4297138506?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2F4297138506"
     price: "¥2,200"
     rating: 4.2
 ctaBox:

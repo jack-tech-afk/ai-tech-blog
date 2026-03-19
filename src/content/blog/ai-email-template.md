@@ -17,7 +17,7 @@ affiliate:
     description: "Outlookと連携してメール作成を効率化"
     rating: 4.3
   - name: "ビジネスメール文例大全"
-    url: "https://www.amazon.co.jp/dp/B0DGY9Q1YH?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0DGY9Q1YH"
     price: "1,760円"
     description: "メール文例集の決定版書籍"
     rating: 4.2

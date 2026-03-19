@@ -7,15 +7,15 @@ heroImage: "/images/heroes/ai-presentation-tools.png"
 tags: ["AIプレゼン", "Gamma", "Beautiful.ai", "Tome", "スライド作成"]
 affiliate:
   - name: "Gamma"
-    url: "https://www.amazon.co.jp/s?k=Gamma&tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DGamma"
     price: "無料〜月額10ドル"
     rating: 4.8
   - name: "Beautiful.ai"
-    url: "https://www.amazon.co.jp/s?k=Beautiful.ai&tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DBeautiful.ai"
     price: "月額12ドル〜"
     rating: 4.5
   - name: "Tome"
-    url: "https://www.amazon.co.jp/s?k=Tome&tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DTome"
     price: "無料〜月額10ドル"
     rating: 4.3
 comparisonTable:
@@ -60,7 +60,7 @@ ctaBox:
   priceNote: "（約1,500円）"
   benefits: ["テキスト入力だけで美しいスライド生成", "日本語完全対応", "Web公開・PDF出力対応", "チーム共同編集機能"]
   ctaText: "Gammaを無料で試す"
-  ctaUrl: "https://www.amazon.co.jp/s?k=Gamma&tag=mamanomikata2-22"
+  ctaUrl: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DGamma"
   isTopPick: true
 reviewSchema:
   productName: "Gamma"
@@ -126,7 +126,7 @@ AIプレゼン作成ツールとは、人工知能がスライドのデザイン
 
 Gammaの最大の強みは**日本語対応の精度**と**デザインの美しさ**です。ビジネスプレゼンからセミナー資料まで、幅広い用途に対応できます。
 
-[Gammaを無料で試す](https://www.amazon.co.jp/s?k=Gamma&tag=mamanomikata2-22)
+[Gammaを無料で試す](https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fs%3Fk%3DGamma)
 
 ### 2. Beautiful.ai - デザイン統一ならこれ
 

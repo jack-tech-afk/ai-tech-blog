@@ -15,7 +15,7 @@ affiliate:
     price: "無料（学生プラン）"
     description: "学生は無料でPlus相当が使えるAI搭載ノートツール"
   - name: "AI時代の学び方（書籍）"
-    url: "https://www.amazon.co.jp/dp/B0DFKDTLKB?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0DFKDTLKB"
     price: "1,650円"
     description: "AI時代に学生が身につけるべきスキルを解説"
 ctaBox:

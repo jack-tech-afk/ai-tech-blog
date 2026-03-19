@@ -15,7 +15,7 @@ affiliate:
     price: "月額20ドル（約3,000円）"
     rating: 4.4
   - name: "データ可視化入門 Pythonで学ぶグラフ作成"
-    url: "https://www.amazon.co.jp/dp/B0CPVFRLZY?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0CPVFRLZY"
     price: "2,970円"
     rating: 4.0
 ctaBox:

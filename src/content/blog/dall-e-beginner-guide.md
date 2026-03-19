@@ -15,7 +15,7 @@ affiliate:
     price: "月額10ドル"
     description: "アート性重視のAI画像生成ツール。DALL-Eとの比較に"
   - name: "XP-PEN Deco MW"
-    url: "https://www.amazon.co.jp/dp/B09WDGFQJY?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB09WDGFQJY"
     price: "約6,000円"
     description: "AI生成画像の微調整に使えるコスパ最強のペンタブレット"
 ctaBox:

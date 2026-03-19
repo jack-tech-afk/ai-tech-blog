@@ -15,11 +15,11 @@ affiliate:
     price: "月額20ドル"
     rating: 4.6
   - name: "アイデア大全（書籍）"
-    url: "https://www.amazon.co.jp/dp/4894517450?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2F4894517450"
     price: "¥1,760"
     rating: 4.3
   - name: "考える技術・書く技術（書籍）"
-    url: "https://www.amazon.co.jp/dp/4478490279?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2F4478490279"
     price: "¥3,080"
     rating: 4.4
 ctaBox:

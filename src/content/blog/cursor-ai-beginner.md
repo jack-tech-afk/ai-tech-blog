@@ -15,7 +15,7 @@ affiliate:
     price: "月額40ドル"
     description: "チーム向けプラン。管理機能やプライバシーモード搭載"
   - name: "プログラミング入門書（Python）"
-    url: "https://www.amazon.co.jp/dp/B0D2Q46ZMY?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB0D2Q46ZMY"
     price: "2,640円"
     description: "Pythonの基礎をゼロから学べる定番入門書"
 ctaBox:

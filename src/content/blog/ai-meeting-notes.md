@@ -19,7 +19,7 @@ affiliate:
     price: "月額1,317円〜"
     rating: 4.4
   - name: "ソニー PCMレコーダー ICD-UX570F"
-    url: "https://www.amazon.co.jp/dp/B07XLRQHVL?tag=mamanomikata2-22"
+    url: "https://af.moshimo.com/af/c/click?a_id=5420076&p_id=170&pc_id=185&pl_id=4062&url=https%3A%2F%2Fwww.amazon.co.jp%2Fdp%2FB07XLRQHVL"
     price: "¥8,800"
     rating: 4.3
 ctaBox:
